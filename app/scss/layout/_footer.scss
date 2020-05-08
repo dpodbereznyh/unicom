@@ -22,9 +22,9 @@
     &_list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
     &_item {
-      width: 50%;
       margin-bottom: 8px;
       transition: all 0.8s ease;
       a {
@@ -43,7 +43,7 @@
   }
   &__submenu {
     &_list {
-      display: none;
+      display: block;
       transition: all 0.8s ease;
     }
     &_item {
@@ -141,13 +141,22 @@
   .footer__submenu_item a {
     font-size: 14px;
   }
+  .footer__menu {
+    margin-bottom: 32px;
+  }
 }
 @include tablet {
-  .footer__menu_list {
-    text-align: center;
+  .footer__menu_list,
+  .footer__menu_item_wrap {
+    justify-content: center;
   }
   .footer__menu_item {
+    text-align: center;
     width: 100%;
+  }
+  .footer__menu_list {
+    text-align: center;
+    flex-direction: column;
   }
   .footer__contacts_wrap_item a, .footer__contacts_wrap_item, .footer__contacts_list, .footer__menu_item a {
     font-size: 16px;

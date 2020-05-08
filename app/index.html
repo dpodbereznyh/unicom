@@ -429,7 +429,7 @@
                 <!-- Additional required wrapper -->
                     <ul class="swiper-wrapper news__slider_wrapper">
                         <!-- Slides -->
-                        <li class="swiper-slide">
+                        <li class="swiper-slide news__slide">
                             <a href="#" class="news__slide_link">
                                 <img data-src="img/news/news-img1.jpg" class="swiper-lazy" src="#" alt="Заголовок новости">
                                 <div class="swiper-lazy-preloader"></div>
@@ -441,7 +441,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="swiper-slide">
+                        <li class="swiper-slide news__slide">
                             <a href="#" class="news__slide_link">
                                 <img data-src="img/news/news-img2.jpg" class="swiper-lazy" src="#" alt="Заголовок новости">
                                 <div class="swiper-lazy-preloader"></div>
@@ -453,7 +453,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="swiper-slide">
+                        <li class="swiper-slide news__slide">
                             <a href="#" class="news__slide_link">
                                 <img data-src="img/news/news-img3.jpg" class="swiper-lazy" src="#" alt="Заголовок новости">
                                 <div class="swiper-lazy-preloader"></div>
@@ -465,7 +465,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="swiper-slide">
+                        <li class="swiper-slide news__slide">
                             <a href="#" class="news__slide_link">
                                 <img data-src="img/news/news-img4.jpg" class="swiper-lazy" src="#" alt="Заголовок новости">
                                 <div class="swiper-lazy-preloader"></div>
@@ -543,117 +543,121 @@
             </div>
             <div class="col-sm-6 col-lg-5">
                 <nav class="footer__menu">
-                    <ul class="footer__menu_list">
-                        <li class="footer__menu_item">
-                            <a href="/" class="footer__menu_item_link">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="footer__menu_item">
-                            <a href="/" class="footer__menu_item_link">
-                                Объекты
-                            </a>
-                            <ul class="footer__submenu_list">
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Строящиеся объекты
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Готовые объекты
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Генеральный план застройки
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Подбор квартиры
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Общий вид дома
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Выбрать квартиру
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Ход строительства
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Квартиры с отделкой
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Ипотечный калькулятор
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Документы
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="footer__menu_item">
-                            <a href="/" class="footer__menu_item_link">
-                                Ипотека
-                            </a>
-                            <ul class="footer__submenu_list">
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Модуль расчета ипотеки
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Необходимые документы
-                                    </a>
-                                </li>
-                                <li class="footer__submenu_item">
-                                    <a href="#">
-                                        Банки - партнеры
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="footer__menu_item">
-                            <a href="/" class="footer__menu_item_link">
-                                Вакансии
-                            </a>
-                        </li>
-                        <li class="footer__menu_item">
-                            <a href="/" class="footer__menu_item_link">
-                                FAQ
-                            </a>
-                        </li>
-                        <li class="footer__menu_item">
-                            <a href="/" class="footer__menu_item_link">
-                                Новости
-                            </a>
-                        </li>
-                        <li class="footer__menu_item">
-                            <a href="/" class="footer__menu_item_link">
-                                Отзывы
-                            </a>
-                        </li>
-                        <li class="footer__menu_item">
-                            <a href="/" class="footer__menu_item_link">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="footer__menu_list">
+                        <ul class="footer__menu_item_wrap">
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Объекты
+                                </a>
+                                <ul class="footer__submenu_list">
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Строящиеся объекты
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Готовые объекты
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Генеральный план застройки
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Подбор квартиры
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Общий вид дома
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Выбрать квартиру
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Ход строительства
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Квартиры с отделкой
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Ипотечный калькулятор
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Документы
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="footer__menu_item_wrap">
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Ипотека
+                                </a>
+                                <ul class="footer__submenu_list">
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Модуль расчета ипотеки
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Необходимые документы
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Банки - партнеры
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Вакансии
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
             <div class="col-lg-3">
