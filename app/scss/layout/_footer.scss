@@ -1,0 +1,166 @@
+.footer {
+  background: $akcentDark;
+  padding: 38px 0 21px;
+  &__contacts_wrap {
+    color: $neutral;
+
+    &_item {
+      margin: 0 0 28px;
+      a {
+        @include footerMenu;
+        color: $neutral;
+        &:hover {
+          color: $akcent1;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  &__menu {
+    margin: 0;
+    padding: 0;
+    &_list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &_item {
+      width: 50%;
+      margin-bottom: 8px;
+      transition: all 0.8s ease;
+      a {
+        @include footerMenu;
+        color: $neutral;
+        &:hover {
+          color: $akcent1;
+          transition: all 0.3s ease;
+        }
+      }
+      &:hover .footer__submenu_list {
+        display: block;
+        transition: all 0.8s ease;
+      }
+    }
+  }
+  &__submenu {
+    &_list {
+      display: none;
+      transition: all 0.8s ease;
+    }
+    &_item {
+      a {
+        @include subMenu;
+      }
+    }
+  }
+  &__logo {
+    width: 120px;
+    height: 80px;
+    margin: 0 auto 28px;
+    &_text {
+      color: $neutral;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 43px;
+    }
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+  &__social {
+    &_list {
+      display: flex;
+      margin: 44px 0;
+      justify-content: center;
+    }
+    &_item {
+      width: 45px;
+      height: 45px;
+      background: $neutral;
+      border-radius: 50%;
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all 0.3s ease;
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover {
+          background: $akcent1;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+.footer__contacts_operating_title {
+  @include subMenu;
+}
+.copyright {
+  color: $neutral;
+  font-family: "Georgia", sans-serif;
+  &__developer {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+  }
+  &__customer {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+  }
+}
+@include desktop {
+  .footer__contacts_wrap_item a, .footer__contacts_wrap_item, .footer__contacts_list, .footer__menu_item a {
+    font-size: 18px;
+  }
+  .footer__submenu_item a {
+    font-size: 14px;
+  }
+}
+@include laptop {
+  .footer__submenu_item a {
+    font-size: 14px;
+  }
+}
+@include tablet {
+  .footer__menu_list {
+    text-align: center;
+  }
+  .footer__menu_item {
+    width: 100%;
+  }
+  .footer__contacts_wrap_item a, .footer__contacts_wrap_item, .footer__contacts_list, .footer__menu_item a {
+    font-size: 16px;
+  }
+  .footer__submenu_item a {
+    font-size: 14px;
+  }
+}
+@include phones {
+  .footer__contacts_wrap {
+    text-align: center;
+  }
+  .footer__logo {
+    margin: 35px auto 28px;
+  }
+}

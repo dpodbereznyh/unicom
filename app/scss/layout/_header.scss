@@ -1,0 +1,119 @@
+.header {
+  &__top_nav {
+    padding: 16px 0;
+    margin-bottom: 4px;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    &_img {
+      width: 106px;
+      height: 80px;
+      margin-right: 21px;
+      img {
+        display: inline-block;
+        width: inherit;
+        height: auto;
+      }
+    }
+    &_text {
+      width: fit-content;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height: 21px;
+      color: $logo1;
+      &-blue {
+        color: $logo2;
+      }
+    }
+  }
+  &__phone {
+    display: flex;
+    align-items: center;
+    &_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &_icon {
+      width: 18px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 16px;
+    }
+    &_text {
+      a {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        color: $akcentDark;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $akcent1;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  &__btn {
+    display: block;
+    margin-left: auto;
+  }
+  &__bottom_nav {
+    margin-bottom: 20px;
+    &-btn {
+      position: absolute;
+      right: 0;
+      display: none;
+    }
+  }
+}
+@include desktop {
+  .header__logo_text {
+    font-size: 16px;
+  }
+  .header__phone_text a {
+    font-size: 16px;
+  }
+}
+@include laptop {
+  .header__phone_wrap {
+    flex-direction: column;
+  }
+  .header__logo_text {
+    font-size: 14px;
+  }
+  .header__phone {
+    padding: 3px 0;
+  }
+  .header__phone_text a {
+    font-size: 14px;
+  }
+}
+@include tablet {
+  .header__bottom_nav-btn {
+    display: block;
+  }
+}
+@include phones {
+  .header__logo {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  .header__logo_text {
+    font-size: 14px;
+  }
+  .header__phone {
+    padding: 0 0 10px;
+  }
+  .header__btn {
+    margin: 20px auto 0;
+  }
+}

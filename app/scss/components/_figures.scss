@@ -1,0 +1,82 @@
+.circle {
+  margin-bottom: 200px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  &-orange {
+    background: $mainScheme2;
+    box-shadow: -43px -42px 0 0px $mainScheme2,
+    0px -42px 0 0px $mainScheme2,
+    -43px 0px 0 0px $mainScheme2,
+    42px 0px 0 0px $mainScheme2,
+    43px 42px 0 0px $mainScheme2,
+    0px 42px 0 0px $mainScheme2,
+    -43px 42px 0 0px $mainScheme2;
+  }
+  &-red {
+    background: $mainScheme1;
+    box-shadow: -43px -42px 0 0px $mainScheme1,
+    0px -42px 0 0px $mainScheme1,
+    -43px 0px 0 0px $mainScheme1,
+    42px 0px 0 0px $mainScheme1,
+    43px 42px 0 0px $mainScheme1,
+    0px 42px 0 0px $mainScheme1,
+    -43px 42px 0 0px $mainScheme1;
+  }
+  &-blue {
+    background: $akcent1;
+    box-shadow: -43px -42px 0 0px $akcent1,
+    0px -42px 0 0px $akcent1,
+    -43px 0px 0 0px $akcent1,
+    42px 0px 0 0px $akcent1,
+    43px 42px 0 0px $akcent1,
+    0px 42px 0 0px $akcent1,
+    -43px 42px 0 0px $akcent1;
+  }
+  &-green {
+    background: $akcent4;
+    box-shadow: -43px -42px 0 0px $akcent4,
+    0px -42px 0 0px $akcent4,
+    -43px 0px 0 0px $akcent4,
+    42px 0px 0 0px $akcent4,
+    43px 42px 0 0px $akcent4,
+    0px 42px 0 0px $akcent4,
+    -43px 42px 0 0px $akcent4;
+  }
+}
+.rectangle {
+  width: 166px;
+  height: 435px;
+  background: $mainScheme2;
+  border-radius: 0 55px 0 0;
+  &-small {
+    width: 88px;
+    height: 131px;
+    border-radius: 55px 0;
+    transform: matrix(0, -1, -1, 0, 0, 0);
+  }
+  &-blue {
+    background: $akcent1;
+    border-radius: 109px;
+  }
+  &-red {
+    width: 139px;
+    height: 385px;
+    border-radius: 0px 55px;
+    transform: matrix(0, -1, -1, 0, 0, 0);
+    background: $mainScheme1;
+  }
+}
+.disk {
+  border-radius: 50%;
+  &-green {
+    width: 157px;
+    height: 157px;
+    background: $akcent4;
+  }
+  &-yellow {
+    width: 144px;
+    height: 144px;
+    background: $akcent6;
+  }
+}

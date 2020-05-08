@@ -1,0 +1,7 @@
+@import "../abstracts/mixins";
+
+@include font-face("Roboto", "../fonts/Roboto/Roboto-Regular", normal);
+@include font-face("Roboto", "../fonts/Roboto/Roboto-Medium", bold);
+@include font-face("Georgia", "../fonts/Georgia/georgia", normal);
+@include font-face("Georgia", "../fonts/Georgia/georgiab", bold);
+

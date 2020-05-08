@@ -1,0 +1,53 @@
+.reviews {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    &_item {
+      max-width: 592px;
+      width: 49%;
+      min-height: 178px;
+      border: 3px solid $akcent7;
+      padding: 32px;
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: $akcentDark;
+      }
+      &_name {
+        @include secondaryTitle;
+        margin-bottom: 16px;
+      }
+      &_text {
+        @include blockText;
+      }
+    }
+  }
+}
+.reviews__btn {
+  display: block;
+  width: 227px;
+  margin: 0 auto;
+  padding: 12px 12px;
+}
+@include tablet {
+  .reviews__list {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    &_item {
+      align-self: center;
+      width: 80%;
+      margin-bottom: 32px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@include phones {
+  .reviews__list_item {
+    width: 100%;
+  }
+}
