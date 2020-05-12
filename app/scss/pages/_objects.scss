@@ -2,7 +2,15 @@
   padding: 27px 0 0;
   &__select {
     &_item {
-
+      input {
+        display: none;
+        &:checked ~ label {
+          color: $neutral;
+          background: $logo2;
+          padding: 16px;
+          text-align: center;
+        }
+      }
     }
     &_list {
       display: flex;
@@ -15,15 +23,8 @@
       font-weight: bold;
       color: $akcentDark;
       padding: 16px;
-      &-active {
-        color: $neutral;
-        background: $logo2;
-        padding: 16px;
-        text-align: center;
-      }
     }
   }
-
   &__item {
     width: 100%;
     margin-bottom: 32px;
@@ -91,20 +92,27 @@
       display: flex;
     }
     &_item-rooms {
-      padding: 16px 32px;
-      border: 1px solid $akcent10;
-      cursor: pointer;
-      @include blockText;
-      color: #000000;
       margin-right: 16px;
       &:first-child {
-        padding: 16px;
+        label {
+          padding: 16px;
+        }
       }
       &:last-child {
         margin-right: 0;
       }
       input {
         display: none;
+        &:checked ~ label {
+          background: #ff9f4a;
+        }
+      }
+      label {
+        padding: 16px 32px;
+        border: 1px solid $akcent10;
+        @include blockText;
+        color: #000000;
+        cursor: pointer;
       }
     }
     &_item-cost {
@@ -238,9 +246,7 @@
         }
       }
       &-floor {
-        padding: 16px 32px;
-        border: 1px solid $akcent10;
-        cursor: pointer;
+
         @include blockText;
         color: #000000;
         margin-right: 16px;
@@ -249,6 +255,14 @@
         }
         input {
           display: none;
+          &:checked ~ label {
+            background: #ff9f4a;
+          }
+        }
+        label {
+          padding: 16px 32px;
+          border: 1px solid $akcent10;
+          cursor: pointer;
         }
       }
     }
