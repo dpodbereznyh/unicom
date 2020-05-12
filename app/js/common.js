@@ -82,4 +82,11 @@ $(document).ready(function () {
             }
         }
     })
+//Objects Toggle
+// //     $('.objects__build').checked();
+//     $('.objects__select_btn').('click', function () {
+//         if ($('.objects__build_input').prop('checked')) {
+//             $(this).addClass('objects__select_btn-active');
+//         }
+//     });
 });

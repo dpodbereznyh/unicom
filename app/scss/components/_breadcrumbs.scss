@@ -1,0 +1,46 @@
+.breadcrumbs {
+  width: 100%;
+  margin: 35px 0;
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    li {
+      &:after {
+        content: '/';
+        font-size: 16px;
+        color: $akcent7;
+        margin-right: 3px;
+      }
+      a {
+        text-decoration: none;
+        color: $akcent7;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $logo2;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    li:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+.breadcrumbs .active  {
+  color: $akcentDark;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}

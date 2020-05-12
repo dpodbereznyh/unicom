@@ -1,0 +1,150 @@
+.objects {
+  padding: 27px 0 0;
+  &__select {
+    &_item {
+
+    }
+    &_list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    &_btn {
+      cursor: pointer;
+      @include blockText;
+      font-weight: bold;
+      color: $akcentDark;
+      padding: 16px;
+      &-active {
+        color: $neutral;
+        background: $logo2;
+        padding: 16px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 32px;
+    &_img {
+      width: 100%;
+      max-height: 290px;
+      margin-bottom: 36px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &_desc {
+      @include secondaryTitle;
+      color: $akcentDark;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &_btn {
+      color: $neutral;
+      width: 134px;
+      height: 47px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $logo2;
+      box-shadow: 0px 10px 25px rgba(18, 133, 196, 0.5);
+      border-radius: 7px;
+      border: 2px solid $logo2;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+      &:hover {
+        background: $neutral;
+        color: $logo2;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+.parameters {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: $akcentDark;
+  @include blockText;
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  }
+  &__block {
+    margin-right: 84px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &_title {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    &_list {
+      display: flex;
+      max-width: 375px;
+    }
+    &_item-rooms {
+      padding: 16px 32px;
+      border: 1px solid $akcent10;
+      cursor: pointer;
+      @include blockText;
+      color: #000000;
+      margin-right: 16px;
+      &:first-child {
+        padding: 16px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      input {
+        display: none;
+      }
+      label {
+
+
+      }
+    }
+    &_list-cost {
+      border: 1px solid $akcent10;
+      padding: 16px 0 16px 16px;
+    }
+    &_item-cost {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      &:first-child {
+        &:after {
+          content: '|';
+          top: 0;
+          right: 0;
+          color: #C5C6BC;
+        }
+      }
+      &:last-child {
+        margin-left: 32px;
+      }
+      input {
+        border: none;
+        max-width: 130px;
+        &::placeholder {
+          color: #C5C6BC;
+          @include blockText;
+          font-weight: 500;
+        }
+      }
+      >label {
+        margin-right: 5px;
+        cursor: pointer;
+        @include blockText;
+      }
+    }
+  }
+  &__subtitle {
+    max-width: 108px;
+    margin-right: 90px;
+  }
+}

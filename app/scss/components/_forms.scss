@@ -1,0 +1,135 @@
+.questions {
+  background: $logo1;
+  color: $neutral;
+  padding: 43px 0 0;
+  margin-top: 67px;
+  &__contacts {
+    display: flex;
+    &_wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    &_img {
+      max-width: 836px;
+      max-height: 360px;
+      width: fit-content;
+      height: fit-content;
+      z-index: 2;
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 0 82px 0 62px;
+    &:last-child {
+      margin-left: 0;
+    }
+    &_icon {
+      width: 16px;
+      height: 18px;
+      margin-right: 32px;
+    }
+    a {
+      color: $neutral;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      @include secondaryTitle;
+      &:hover {
+        color: $logo2;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  &-disk-green {
+    right: 0;
+    top: 0;
+  }
+}
+.disk-questions {
+  background: $akcent3;
+  width: 199px;
+  height: 199px;
+  position: absolute;
+  top: 89px;
+  right: 429px;
+}
+.circle-questions {
+  background: $neutral;
+  position: absolute;
+  right: 226px;
+  top: 114px;
+}
+.rectangle-blue-questions {
+  position: absolute;
+  right: 0;
+  width: 149px;
+  height: 373px;
+  top: 0;
+}
+.rectangle-orange-questions {
+  border-radius: 109px;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 124px;
+  top: 42px;
+  width: 29px;
+  height: 92px;
+  z-index: 1;
+}
+.form {
+  max-width: 360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto 43px;
+  &__title {
+    @include firstTitle;
+    text-transform: uppercase;
+    color: $neutral;
+    margin-bottom: 0;
+  }
+  &__subtitle {
+    @include firstTitle;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__description {
+    @include blockText;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  >.controls {
+    margin-bottom: 15px;
+  }
+  &__input {
+    width: 100%;
+    height: 47px;
+    border-radius: 65px;
+    background: $neutral;
+    border: none;
+    padding-left: 25px;
+    display: inline-block;
+    &::placeholder {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      color: #C5C6BC;
+    }
+  }
+  &__btn {
+    max-width: 134px;
+    margin: 0 auto;
+  }
+}

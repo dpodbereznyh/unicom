@@ -1,0 +1,14 @@
+.master-plane {
+  padding: 50px 0 0 0;
+  &__img {
+    width: 100%;
+    height: fit-content;
+    display: inline-block;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+  }
+}

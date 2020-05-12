@@ -15,6 +15,14 @@ body {
 sup {
   font-size: 12px;
 }
+input {
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+}
 a:hover {
   text-decoration: none!important;
 }

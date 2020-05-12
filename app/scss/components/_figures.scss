@@ -13,6 +13,16 @@
     0px 42px 0 0px $mainScheme2,
     -43px 42px 0 0px $mainScheme2;
   }
+  &-white {
+    background: $neutral;
+    box-shadow: -43px -42px 0 0px $neutral,
+    0px -42px 0 0px $neutral,
+    -43px 0px 0 0px $neutral,
+    42px 0px 0 0px $neutral,
+    43px 42px 0 0px $neutral,
+    0px 42px 0 0px $neutral,
+    -43px 42px 0 0px $neutral;
+  }
   &-red {
     background: $mainScheme1;
     box-shadow: -43px -42px 0 0px $mainScheme1,
