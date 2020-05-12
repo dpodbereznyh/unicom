@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/header/header_logo.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/header/header_logo.png">
     <link rel="stylesheet" href="css/main.min.css">
-    <title>Объекты | ЖК УНИКУМ</title>
+    <title>Объекты | ЖК УНИКОМ</title>
 </head>
 <body>
 <main class="main">
@@ -377,9 +377,9 @@
     </section>
     <section class="section select-flat">
         <div class="container-fluid">
-            <h2 class="section__title">
+            <p class="section__title">
                 Подбор квартиры по параметрам
-            </h2>
+            </p>
             <div class="parameters">
                 <p class="parameters__subtitle">
                     Подобрать квартиру
@@ -428,7 +428,180 @@
                     Показать
                 </button>
             </div>
+            <div class="advanced-search">
+                <div class="advanced-search__btn btn">
+                    <p>Расширенный поиск</p>
+                    <img src="img/select-flat/search-arrow.svg" alt="arrow">
+                </div>
+                <ul class="advanced-search__list">
+                    <li class="advanced-search__block">
+                        <p class="advanced-search__block_title">
+                            Площадь, м2
+                        </p>
+                        <ul class="advanced-search__block_list">
+                            <li class="advanced-search__block_item advanced-search__block_item-area">
+                                <!--<label for="area-from">от</label>-->
+                                <input id="area-from" type="text" placeholder="от">
+                            </li>
+                            <li class="advanced-search__block_item advanced-search__block_item-area">
+                                <!--<label for="area-up">до</label>-->
+                                <input id="area-up" type="text" placeholder="до">
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="advanced-search__block">
+                        <p class="advanced-search__block_title">
+                            Этаж
+                        </p>
+                        <ul class="advanced-search__block_list">
+                            <li class="advanced-search__block_item advanced-search__block_item-floor">
+                                <input id="first-floor" type="radio" name="floor">
+                                <label for="first-floor">1</label>
+                            </li>
+                            <li class="advanced-search__block_item advanced-search__block_item-floor">
+                                <input id="second-floor" type="radio" name="floor">
+                                <label for="second-floor">2</label>
+                            </li>
+                            <li class="advanced-search__block_item advanced-search__block_item-floor">
+                                <input id="third-floor" type="radio" name="floor">
+                                <label for="third-floor">3</label>
+                            </li>
+                            <li class="advanced-search__block_item advanced-search__block_item-floor">
+                                <input id="fourth-floor" type="radio" name="floor">
+                                <label for="fourth-floor">4+</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="advanced-search__block">
+                        <select class="quarter" name="quarter" id="quarter">
+                            <option>Квартал</option>
+                            <option>Пункт 2</option>
+                        </select>
+                    </li>
+                    <li class="advanced-search__block">
+                        <select class="date" name="date" id="date">
+                            <option>Срок сдачи</option>
+                            <option>Пункт 2</option>
+                        </select>
+                    </li>
+                    <li class="advanced-search__block">
+                        <select class="deal" name="deal" id="deal">
+                            <option>Тип сделки</option>
+                            <option>Пункт 2</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <button type="submit" class="btn advanced-search__res_btn">
+                Показать
+            </button>
         </div>
+    </section>
+    <section class="section select-result">
+        <div class="container-fluid">
+            <h2 class="section__title select-result__title">
+                Результаты подбора: 50 квартир
+            </h2>
+            <ul class="select-result__list">
+                <li class="select-result__item">
+                    <div class="select-result__item-desc">
+                        <div class="select-result__delineation">
+                            <div class="select-result__delineation_img">
+                                <img src="img/select-flat/result/result-img.jpg" alt="Проект">
+                            </div>
+                            <div class="select-result__delineation_text">
+                                <p class="select-result__delineation_address">
+                                    Корпус 1, секция 1
+                                </p>
+                                <p class="select-result__delineation_flat">
+                                    Однокомнатная квартира 36 кв.м.
+                                </p>
+                                <p class="select-result__delineation_floor">
+                                    6 этаж
+                                </p>
+                                <div class="select-result__delineation_status">
+                                    <img src="img/select-flat/status-icon.svg" alt="Отделка">
+                                    <p>Отделка</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-result__item-coast">
+                        <p class="select-result__item_amount">
+                            7 056 000 &#8381
+                        </p>
+                        <p class="select-result__item_part-amount">
+                            или 196 000 за кв.м.
+                        </p>
+                    </div>
+                </li>
+                <li class="select-result__item">
+                    <div class="select-result__item-desc">
+                        <div class="select-result__delineation">
+                            <div class="select-result__delineation_img">
+                                <img src="img/select-flat/result/result-img.jpg" alt="Проект">
+                            </div>
+                            <div class="select-result__delineation_text">
+                                <p class="select-result__delineation_address">
+                                    Корпус 1, секция 1
+                                </p>
+                                <p class="select-result__delineation_flat">
+                                    Однокомнатная квартира 36 кв.м.
+                                </p>
+                                <p class="select-result__delineation_floor">
+                                    6 этаж
+                                </p>
+                                <div class="select-result__delineation_status">
+                                    <img src="img/select-flat/status-icon.svg" alt="Отделка">
+                                    <p>Отделка</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-result__item-coast">
+                        <p class="select-result__item_amount">
+                            7 056 000 &#8381
+                        </p>
+                        <p class="select-result__item_part-amount">
+                            или 196 000 за кв.м.
+                        </p>
+                    </div>
+                </li>
+                <li class="select-result__item">
+                    <div class="select-result__item-desc">
+                        <div class="select-result__delineation">
+                            <div class="select-result__delineation_img">
+                                <img src="img/select-flat/result/result-img.jpg" alt="Проект">
+                            </div>
+                            <div class="select-result__delineation_text">
+                                <p class="select-result__delineation_address">
+                                    Корпус 1, секция 1
+                                </p>
+                                <p class="select-result__delineation_flat">
+                                    Однокомнатная квартира 36 кв.м.
+                                </p>
+                                <p class="select-result__delineation_floor">
+                                    6 этаж
+                                </p>
+                                <div class="select-result__delineation_status">
+                                    <img src="img/select-flat/status-icon.svg" alt="Отделка">
+                                    <p>Отделка</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-result__item-coast">
+                        <p class="select-result__item_amount">
+                            7 056 000 &#8381
+                        </p>
+                        <p class="select-result__item_part-amount">
+                            или 196 000 за кв.м.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
     </section>
 
 </main>

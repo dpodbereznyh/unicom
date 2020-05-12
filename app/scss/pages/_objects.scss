@@ -63,19 +63,23 @@
     }
   }
 }
+
+//Подбор квартиры
+
 .parameters {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   color: $akcentDark;
   @include blockText;
+  margin-bottom: 32px;
   &__list {
     display: flex;
     align-items: flex-end;
     width: 100%;
   }
   &__block {
-    margin-right: 84px;
+    margin-right: 79px;
     &:last-child {
       margin-right: 0;
     }
@@ -85,7 +89,6 @@
     }
     &_list {
       display: flex;
-      max-width: 375px;
     }
     &_item-rooms {
       padding: 16px 32px;
@@ -103,33 +106,35 @@
       input {
         display: none;
       }
-      label {
-
-
-      }
-    }
-    &_list-cost {
-      border: 1px solid $akcent10;
-      padding: 16px 0 16px 16px;
     }
     &_item-cost {
       display: flex;
       align-items: center;
-      width: fit-content;
+      width: 182px;
+      border-top: 1px solid $akcent10;
+      border-bottom: 1px solid $akcent10;
+      padding: 16px;
       &:first-child {
+        border-left: 1px solid $akcent10;
+        position: relative;
         &:after {
+          position: absolute;
           content: '|';
-          top: 0;
           right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
           color: #C5C6BC;
         }
       }
       &:last-child {
-        margin-left: 32px;
+        border-top: 1px solid $akcent10;
+        border-right: 1px solid $akcent10;
+        border-bottom: 1px solid $akcent10;
+        padding: 16px 16px 16px 28px;
       }
       input {
         border: none;
-        max-width: 130px;
+        width: 100%;
         &::placeholder {
           color: #C5C6BC;
           @include blockText;
@@ -146,5 +151,226 @@
   &__subtitle {
     max-width: 108px;
     margin-right: 90px;
+  }
+}
+
+//Расширенный поиск
+
+.advanced-search {
+  &__res_btn {
+    margin: 0 auto;
+    max-width: 127px;
+    display: block;
+  }
+  &__btn {
+    max-width: 256px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: $akcentDark;
+    @include blockText;
+    margin-bottom: 32px;
+  }
+  &__block {
+    select {
+      color: #C5C6BC;
+      @include blockText;
+      font-weight: 500;
+      position: relative;
+      background: url("../img/select-flat/select-arrow.svg") no-repeat 95% center;
+      option {
+        color: $akcentDark;
+        @include blockText;
+      }
+    }
+    &_list {
+      display: flex;
+    }
+    &_title {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    &_item {
+      &-area {
+        display: flex;
+        align-items: center;
+        width: 77px;
+        border-top: 1px solid $akcent10;
+        border-bottom: 1px solid $akcent10;
+        padding: 16px;
+        &:first-child {
+          border-left: 1px solid $akcent10;
+          position: relative;
+          &:after {
+            position: absolute;
+            content: '|';
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            color: #C5C6BC;
+          }
+        }
+        &:last-child {
+          border-top: 1px solid $akcent10;
+          border-right: 1px solid $akcent10;
+          border-bottom: 1px solid $akcent10;
+          padding: 16px 16px 16px 28px;
+        }
+        input {
+          border: none;
+          width: 100%;
+          &::placeholder {
+            color: #C5C6BC;
+            @include blockText;
+            font-weight: 500;
+          }
+        }
+        >label {
+          margin-right: 5px;
+          cursor: pointer;
+          @include blockText;
+        }
+      }
+      &-floor {
+        padding: 16px 32px;
+        border: 1px solid $akcent10;
+        cursor: pointer;
+        @include blockText;
+        color: #000000;
+        margin-right: 16px;
+        &:last-child {
+          margin-right: 0;
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.quarter {
+  width: 187px;
+  padding: 16px;
+}
+.date, .deal {
+  padding: 16px;
+  width: 216px;
+}
+
+//Результаты подбора
+
+.select-result {
+  &__title {
+    @include secondaryTitle;
+  }
+  &__list {
+
+
+
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #C5C6BC;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 64px;
+    }
+    &-desc {
+      width: 66%;
+      display: flex;
+      position: relative;
+      padding: 36px 0 27px 109px;
+      &:after {
+        content: '';
+        width: 1px;
+        height: 80%;
+        background: #C5C6BC;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+      }
+    }
+    &-coast {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &_amount {
+      @include firstTitle;
+      color: $akcentDark;
+      margin-bottom: 16px;
+    }
+    &_part-amount {
+      @include blockText;
+      color: #C5C6BC;
+    }
+  }
+  &__delineation {
+    display: flex;
+    align-items: center;
+    &_img {
+      width: 158px;
+      height: 182px;
+      margin-right: 32px;
+      img {
+        max-width: 100%;
+        width: 100%;
+        display: inline-block;
+      }
+    }
+    &_text {
+    > p {
+      margin-bottom: 16px;
+    }
+    }
+    &_address {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      color: $akcent10;
+    }
+    &_flat {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: $akcentDark;
+    }
+    &_floor {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      color: $akcent10;
+    }
+    &_status {
+      width: 121px;
+      height: 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #98B620;
+      color: #98B620;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      padding: 0 16px;
+    }
   }
 }
