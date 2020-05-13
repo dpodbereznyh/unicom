@@ -489,3 +489,48 @@
     }
   }
 }
+@include desktop {
+  .select-result__item-desc {
+    padding: 27px;
+  }
+}
+@include tablet {
+  .select-result__item {
+    flex-direction: column;
+  }
+  .select-result__item-desc, .select-result__item-coast {
+    width: 100%;
+  }
+  .select-result__item-desc, .select-result__item-coast {
+    padding: 25px;
+  }
+    .select-result__item-desc:after {
+    content: '';
+    width: 80%;
+    height: 1px;
+    background: #c5c6bc;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+}
+@include phones {
+  .select-result__delineation {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .select-result__item-desc {
+    justify-content: center;
+  }
+  .select-result__delineation_img {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+  .select-result__delineation_text {
+    text-align: center;
+  }
+  .select-result__delineation_status {
+    margin: 0 auto;
+  }
+}
