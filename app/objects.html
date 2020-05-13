@@ -222,7 +222,7 @@
                     </div>
                 </div>
             </div>
-            <div class="objects__ready_list d-none">
+            <div class="objects__ready_list" style="background: #000">
                 <div class="row">
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="objects__item">
@@ -544,84 +544,84 @@
                         </button>
                     </div>
             </div>
-            <div class="row align-items-end">
-                <div class="col-12">
-                    <div class="advanced-search__btn btn">
-                        <p>Расширенный поиск</p>
-                        <img src="img/select-flat/search-arrow.svg" alt="arrow">
-                    </div>
-                </div>
-                <!--<ul class="advanced-search__list">-->
-                <div class="col-sm-4 col-lg-3 col-xl-2 justify-content-center">
-                    <div class="advanced-search__block advanced-search__block-area">
-                        <p class="advanced-search__block_title">
-                            Площадь, м2
-                        </p>
-                        <ul class="advanced-search__block_list">
-                            <li class="advanced-search__block_item advanced-search__block_item-area">
-                                <!--<label for="area-from">от</label>-->
-                                <input id="area-from" type="text" placeholder="от">
-                            </li>
-                            <li class="advanced-search__block_item advanced-search__block_item-area">
-                                <!--<label for="area-up">до</label>-->
-                                <input id="area-up" type="text" placeholder="до">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-7 col-md-8 col-lg-9 col-xl-4">
-                    <div class="advanced-search__block advanced-search__block-floor">
-                        <p class="advanced-search__block_title">
-                            Этаж
-                        </p>
-                        <ul class="advanced-search__block_list">
-                            <li class="advanced-search__block_item advanced-search__block_item-floor">
-                                <input id="first-floor" type="radio" name="floor">
-                                <label for="first-floor">1</label>
-                            </li>
-                            <li class="advanced-search__block_item advanced-search__block_item-floor">
-                                <input id="second-floor" type="radio" name="floor">
-                                <label for="second-floor">2</label>
-                            </li>
-                            <li class="advanced-search__block_item advanced-search__block_item-floor">
-                                <input id="third-floor" type="radio" name="floor">
-                                <label for="third-floor">3</label>
-                            </li>
-                            <li class="advanced-search__block_item advanced-search__block_item-floor">
-                                <input id="fourth-floor" type="radio" name="floor">
-                                <label for="fourth-floor">4+</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xl-2">
-                    <div class="advanced-search__block">
-                        <select class="quarter" name="quarter" id="quarter">
-                            <option>Квартал</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xl-2">
-                    <div class="advanced-search__block">
-                        <select class="advanced-search__block date" name="date" id="date">
-                            <option>Срок сдачи</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xl-2">
-                    <div class="advanced-search__block">
-                        <select class="advanced-search__block deal" name="deal" id="deal">
-                            <option>Тип сделки</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="advanced-search__btn btn">
+                <p>Расширенный поиск</p>
+                <img src="img/select-flat/search-arrow.svg" alt="arrow">
             </div>
-            <button type="submit" class="btn advanced-search__res_btn">
-                Показать
-            </button>
+            <div class="advanced-search d-none">
+                <div class="row align-items-end">
+                    <!--<ul class="advanced-search__list">-->
+                    <div class="col-sm-4 col-lg-3 col-xl-2 justify-content-center">
+                        <div class="advanced-search__block advanced-search__block-area">
+                            <p class="advanced-search__block_title">
+                                Площадь, м2
+                            </p>
+                            <ul class="advanced-search__block_list">
+                                <li class="advanced-search__block_item advanced-search__block_item-area">
+                                    <!--<label for="area-from">от</label>-->
+                                    <input id="area-from" type="text" placeholder="от">
+                                </li>
+                                <li class="advanced-search__block_item advanced-search__block_item-area">
+                                    <!--<label for="area-up">до</label>-->
+                                    <input id="area-up" type="text" placeholder="до">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-md-8 col-lg-9 col-xl-4">
+                        <div class="advanced-search__block advanced-search__block-floor">
+                            <p class="advanced-search__block_title">
+                                Этаж
+                            </p>
+                            <ul class="advanced-search__block_list">
+                                <li class="advanced-search__block_item advanced-search__block_item-floor">
+                                    <input id="first-floor" type="radio" name="floor">
+                                    <label for="first-floor">1</label>
+                                </li>
+                                <li class="advanced-search__block_item advanced-search__block_item-floor">
+                                    <input id="second-floor" type="radio" name="floor">
+                                    <label for="second-floor">2</label>
+                                </li>
+                                <li class="advanced-search__block_item advanced-search__block_item-floor">
+                                    <input id="third-floor" type="radio" name="floor">
+                                    <label for="third-floor">3</label>
+                                </li>
+                                <li class="advanced-search__block_item advanced-search__block_item-floor">
+                                    <input id="fourth-floor" type="radio" name="floor">
+                                    <label for="fourth-floor">4+</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <div class="advanced-search__block">
+                            <select class="quarter" name="quarter" id="quarter">
+                                <option>Квартал</option>
+                                <option>Пункт 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <div class="advanced-search__block">
+                            <select class="advanced-search__block date" name="date" id="date">
+                                <option>Срок сдачи</option>
+                                <option>Пункт 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <div class="advanced-search__block">
+                            <select class="advanced-search__block deal" name="deal" id="deal">
+                                <option>Тип сделки</option>
+                                <option>Пункт 2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn advanced-search__res_btn">
+                    Показать
+                </button>
+            </div>
         </div>
     </section>
     <section class="section select-result">

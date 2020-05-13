@@ -64,6 +64,9 @@
     }
   }
 }
+.objects__ready_list {
+  display: none;
+}
 @include tablet {
   .objects__item_img {
     max-height: unset;
@@ -225,12 +228,15 @@
 }
 
 //Расширенный поиск
-
+.advanced-search__active {
+  display: block;
+}
 .advanced-search {
   &__res_btn {
     margin: 32px auto;
     max-width: 127px;
     display: block;
+    cursor: pointer;
   }
   &__btn {
     max-width: 256px;

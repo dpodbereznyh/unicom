@@ -83,10 +83,19 @@ $(document).ready(function () {
         }
     })
 //Objects Toggle
-// //     $('.objects__build').checked();
-//     $('.objects__select_btn').('click', function () {
-//         if ($('.objects__build_input').prop('checked')) {
-//             $(this).addClass('objects__select_btn-active');
-//         }
-//     });
+    $('.objects__select_item').click(function () {
+        if ($('#objects__ready').is(':checked')){
+            $('.objects__ready_list').css('display', 'block');
+            $('.objects__build_list').css('display', 'none');
+        } else {
+            $('.objects__ready_list').css('display', 'none');
+            $('.objects__build_list').css('display', 'block');
+        }
+    });
+// Advanced Search Parameters
+
+    $('.advanced-search__btn').click(function () {
+        $('.advanced-search').toggleClass('d-none');
+    });
 });
+
