@@ -96,6 +96,7 @@
     text-transform: uppercase;
     color: $neutral;
     margin-bottom: 0;
+    text-align: center;
   }
   &__subtitle {
     @include firstTitle;
@@ -131,5 +132,51 @@
   &__btn {
     max-width: 134px;
     margin: 0 auto;
+  }
+}
+@include laptop {
+  .rectangle-blue-questions {
+    width: 99px;
+    height: 293px;
+  }
+  .rectangle-orange-questions {
+    right: 89px;
+  }
+  .circle-questions {
+    right: 178px;
+  }
+  .disk-questions {
+    width: 100px;
+    height: 100px;
+    top: 78px;
+    right: 549px;
+  }
+}
+@include tablet {
+  .questions__contacts {
+    flex-direction: column;
+  }
+  .questions__item {
+    margin: 0 auto 16px;
+  }
+  .questions__item:last-child {
+    margin: 0 auto;
+  }
+  .disk-questions {
+    right: unset;
+  }
+  .circle-questions {
+    top: 144px;
+  }
+}
+@include phones {
+  .disk-questions, .circle-questions, .rectangle-blue-questions {
+    display: none;
+  }
+  .rectangle-orange-questions {
+    right: 20px;
+    top: 58px;
+    width: 19px;
+    height: 72px;
   }
 }

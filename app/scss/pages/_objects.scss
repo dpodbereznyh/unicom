@@ -64,7 +64,22 @@
     }
   }
 }
-
+@include tablet {
+  .objects__item_img {
+    max-height: unset;
+  }
+}
+@include phones {
+  .objects__select_list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .objects__item_img {
+    width: 288px;
+    height: 288px;
+    margin: 0 auto 32px;
+  }
+}
 //Подбор квартиры
 
 .parameters {
@@ -143,6 +158,7 @@
       input {
         border: none;
         width: 100%;
+        height: 20px;
         &::placeholder {
           color: #C5C6BC;
           @include blockText;
@@ -157,8 +173,54 @@
     }
   }
   &__subtitle {
-    max-width: 108px;
     margin-right: 90px;
+  }
+  &__btn {
+    display: block;
+    margin-left: auto;
+  }
+}
+@include desktop {
+  .parameters__btn {
+    margin: 25px auto;
+  }
+  .parameters__subtitle {
+    margin-right: unset;
+  }
+}
+@include laptop {
+  .parameters__block_list-rooms, .parameters__block_list-cost {
+    justify-content: center;
+  }
+  .parameters__block-cost {
+    margin-top: 25px;
+  }
+}
+@include phones {
+  .parameters__block_list-rooms {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .parameters__block_item-rooms {
+    margin-right: 0;
+    margin-bottom: 16px;
+    label {
+      width: 150px;
+      height: 57px;
+    }
+  }
+  .parameters__block_item-cost {
+    &:last-child {
+      padding: 16px 16px 16px 18px;
+    }
+    label {
+      font-size: 16px;
+    }
+    input {
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
   }
 }
 
@@ -166,16 +228,15 @@
 
 .advanced-search {
   &__res_btn {
-    margin: 0 auto;
+    margin: 32px auto;
     max-width: 127px;
     display: block;
   }
   &__btn {
     max-width: 256px;
-    margin: 0 auto;
+    margin: 32px auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 32px;
   }
   &__list {
     display: flex;
@@ -187,6 +248,8 @@
   }
   &__block {
     select {
+      padding: 16px;
+      width: 100%;
       color: #C5C6BC;
       @include blockText;
       font-weight: 500;
@@ -203,6 +266,9 @@
     &_title {
       text-align: center;
       margin-bottom: 16px;
+    }
+    &-area {
+      width: fit-content;
     }
     &_item {
       &-area {
@@ -233,6 +299,7 @@
         input {
           border: none;
           width: 100%;
+          height: 22px;
           &::placeholder {
             color: #C5C6BC;
             @include blockText;
@@ -268,13 +335,50 @@
     }
   }
 }
-.quarter {
-  width: 187px;
-  padding: 16px;
+@include desktop {
+  .advanced-search__block-floor {
+    width: fit-content;
+    margin-bottom: 25px;
+  }
+  .advanced-search__block-area {
+    margin-bottom: 25px;
+  }
 }
-.date, .deal {
-  padding: 16px;
-  width: 216px;
+@include tablet {
+  .advanced-search__block_item-floor label {
+    padding: 16px 30px;
+  }
+  .advanced-search__block select {
+    width: 288px;
+    display: block;
+    margin: 0 auto 25px;
+  }
+}
+@include phones{
+  .advanced-search__block-area {
+    margin: 0 auto 25px;
+  }
+  .advanced-search__block_item-area {
+    width: 50%;
+  }
+  .advanced-search__block_item-area input::placeholder {
+    font-size: 16px;
+  }
+  .advanced-search__block_list {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .advanced-search__block_item-floor {
+    margin: 0 0 16px 0;
+    label {
+      width: 150px;
+      height: 57px;
+    }
+  }
+  .advanced-search__res_btn {
+    margin: 0 auto 32px;
+  }
 }
 
 //Результаты подбора
@@ -284,9 +388,6 @@
     @include secondaryTitle;
   }
   &__list {
-
-
-
   }
   &__item {
     display: flex;
