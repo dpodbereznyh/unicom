@@ -295,3 +295,69 @@
     padding: 64px 0 32px;
   }
 }
+
+//Select Flat
+.select-porch {
+  display: flex;
+  &__title {
+    width: 95px;
+    @include blockText;
+    color: $akcentDark;
+    margin-right: 95px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+    input {
+      display: none;
+      &:checked ~ label {
+        background: $logo2;
+        color: $neutral;
+      }
+    }
+    label {
+      @include secondaryTitle;
+      color: $akcent10;
+      cursor: pointer;
+      width: 141px;
+      height: 49px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.select-flat {
+
+}
+@include tablet {
+  .select-porch {
+    flex-direction: column;
+  }
+  .select-porch__title {
+    width: auto;
+    text-align: center;
+    margin-bottom: 32px;
+    margin-right: 0;
+  }
+  .select-porch__list {
+    justify-content: space-around;
+  }
+  .select-porch__item {
+    margin-right: 0;
+  }
+}
+@include phones {
+  .select-porch__list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .select-porch__item {
+    margin-bottom: 16px;
+  }
+}
