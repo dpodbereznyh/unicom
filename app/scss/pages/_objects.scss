@@ -1,4 +1,5 @@
 .objects {
+  margin-top: 35px;
   padding: 27px 0 0;
   &__select {
     &_item {
@@ -228,8 +229,20 @@
 }
 
 //Расширенный поиск
-.advanced-search__active {
+.icon-chevron-down {
   display: block;
+  position: relative;
+  width: 12px;
+  height: 7px;
+  &:before {
+    content: "\e900";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 7px;
+  }
 }
 .advanced-search {
   &__res_btn {
@@ -243,6 +256,14 @@
     margin: 32px auto;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    line-height: 100%;
+    &:hover {
+      background: darken($logo2, 20%);
+      color: $neutral;
+      border: 2px solid darken($logo2, 20%);
+    }
   }
   &__list {
     display: flex;

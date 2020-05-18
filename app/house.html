@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/header/header_logo.png">
+    <link rel="apple-touch-icon" href="img/header/header_logo.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/header/header_logo.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/header/header_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Дом | ЖК УНИКОМ</title>
+</head>
+<body>
+<main class="main">
+    <header class="header">
+        <div class="header__top_nav">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-sm-7 col-md-5 col-lg-4">
+                        <a href="/" class="header__logo">
+                            <div class="header__logo_img">
+                                <img src="img/header/header-logo.svg" alt="Альянс Инвест">
+                            </div>
+                            <div class="header__logo_text">
+                                <p>
+                                    Мы заботимся
+                                </p>
+                                <p class="header__logo_text-blue">
+                                    О вашем комфорте!
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-5">
+                        <div class="header__phone_wrap">
+                            <div class="header__phone">
+                                <img class="header__phone_icon" src="img/header/phone-icon.svg" alt="Телефон">
+                                <div class="header__phone_text">
+                                    <a href="tel:+79308300769">
+                                        +7 (930) 830-07-69
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header__phone">
+                                <img class="header__phone_icon" src="img/header/phone-icon.svg" alt="Телефон">
+                                <div class="header__phone_text">
+                                    <a href="tel:+79157764636">
+                                        +7 (915) 776-46-36
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-md-block col-md-4 col-lg-3">
+                        <button class="btn header__btn">
+                            Подобрать квартиру
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Menu -->
+        <div class="header__bottom_nav">
+            <div class="container-fluid">
+                <nav class="main-nav" role="navigation">
+                    <button class="btn header__bottom_nav-btn">
+                        Подобрать квартиру
+                    </button>
+                    <!-- Mobile menu toggle button (hamburger/x icon) -->
+                    <input id="main-menu-state" type="checkbox" />
+                    <label class="main-menu-btn" for="main-menu-state">
+                        <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+                    </label>
+                    <!-- Sample menu definition -->
+                    <ul id="main-menu" class="sm sm-clean">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="#">Объекты</a></li>
+                        <li><a href="#">Ипотека</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <!-- End Header Menu -->
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumbs">
+        <div class="container-fluid">
+            <ul class="breadcrumbs__list">
+                <li>
+                    <a href="#">
+                        Главная
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Объекты
+                    </a>
+                </li>
+                <li class="active">
+                    1 дом 2 квартал
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="section general-view">
+        <div class="container-fluid">
+            <h2 class="section__title">
+                Общий вид дома
+            </h2>
+            <div class="general-view_wrap">
+                <div class="general-view_img">
+                    <div class="swiper-container general-view__slider_container">
+                        <ul class="swiper-wrapper general-view__slider_wrapper">
+                            <li class="swiper-slide general-view__slider_slide">
+                                <a href="#" class="general-view__slider_link">
+                                    <img data-src="img/house/image1.jpg" class="swiper-lazy" src="#" alt="Заголовок новости">
+                                </a>
+                            </li>
+                            <li class="swiper-slide general-view__slider_slide">
+                                <a href="#" class="general-view__slider_link">
+                                    <img data-src="img/house/image1.jpg" class="swiper-lazy" src="#" alt="Заголовок новости">
+                                </a>
+                            </li>
+                            <li class="swiper-slide general-view__slider_slide">
+                                <a href="#" class="general-view__slider_link">
+                                    <img data-src="img/house/image1.jpg" class="swiper-lazy" src="#" alt="Заголовок новости">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination general-view__slider_pagination-bullets"></div>
+                        <div class="general-view__slider_button-next slider-button-next">
+                            <img src="img/news/arrow-prev.svg" alt="prev">
+                        </div>
+                        <div class="general-view__slider_button-prev slider-button-prev">
+                            <img src="img/news/arrow-next.svg" alt="next">
+                        </div>
+                    </div>
+                    <ul class="general-view__gallery_list">
+                        <li class="general-view__gallery_item">
+                            <a href="" class="general-view__gallery_link">
+                                <img src="img/house/image2.jpg" alt="Галлерея">
+                            </a>
+                        </li>
+                        <li class="general-view__gallery_item">
+                            <a href="" class="general-view__gallery_link">
+                                <img src="img/house/image3.jpg" alt="Галлерея">
+                            </a>
+                        </li>
+                        <li class="general-view__gallery_item">
+                            <a href="" class="general-view__gallery_link">
+                                <img src="img/house/image4.jpg" alt="Галлерея">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="general-view__specification">
+                    <p class="general-view__specification_title">
+                        1 дом 1 квартал
+                    </p>
+                    <ul class="general-view__specification_list">
+                        <li class="general-view__specification_item">
+                            <p>
+                                Сдача объекта
+                            </p>
+                            <span>
+                                3 кв 2021 г
+                            </span>
+                        </li>
+                        <li class="general-view__specification_item">
+                            <p>
+                                Материал постройки
+                            </p>
+                            <span>
+                                монолитно-блочный
+                            </span>
+                        </li>
+                        <li class="general-view__specification_item">
+                            <p>
+                                Этажность здания
+                            </p>
+                            <span>
+                                3 этажа
+                            </span>
+                        </li>
+                        <li class="general-view__specification_item">
+                            <p>
+                                Тип отопления
+                            </p>
+                            <span>
+                                крышная газовая котельная
+                            </span>
+                        </li>
+                        <li class="general-view__specification_item">
+                            <p>
+                                Лифт
+                            </p>
+                            <span>
+                                пассажирский
+                            </span>
+                        </li>
+                        <li class="general-view__specification_item">
+                            <p>
+                                Парковка
+                            </p>
+                            <span>
+                                открытые парковочные места
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="general-view__text">
+                Вот вам яркий пример современных тенденций - убеждённость некоторых оппонентов напрямую зависит от своевременного выполнения сверхзадачи. Внезапно, базовые сценарии поведения пользователей, вне зависимости от их уровня, должны быть своевременно верифицированы.
+            </p>
+        </div>
+    </section>
+    <section class="house__gallery">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="house__gallery_item">
+                        <img src="img/house/image5.jpg" alt="Парковка">
+                        <div class="house__gallery_item-layout">
+                            <a href="" class="house__gallery_btn btn">
+                                Парковка
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="house__gallery_item">
+                        <img src="img/house/image6.jpg" alt="Входния группа">
+                        <div class="house__gallery_item-layout">
+                            <a href="" class="house__gallery_btn btn">
+                                Входния группа
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="house__gallery_item">
+                        <img src="img/house/image7.jpg" alt="Колясочная">
+                        <div class="house__gallery_item-layout">
+                            <a href="" class="house__gallery_btn btn">
+                                Колясочная
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="house__gallery_item">
+                        <img src="img/house/image8.jpg" alt="Детская площадка">
+                        <div class="house__gallery_item-layout">
+                            <a href="" class="house__gallery_btn btn">
+                                Детская площадка
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="house__gallery_item">
+                        <img src="img/house/image9.jpg" alt="Общий вид">
+                        <div class="house__gallery_item-layout">
+                            <a href="" class="house__gallery_btn btn">
+                                Общий вид
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section progress-build">
+        <div class="">
+            <h2 class="section__title">
+                Ход строительства
+            </h2>
+            <div class="progress-build__slider">
+                <div class="swiper-container progress-build__slider_container">
+                    <div class="swiper-wrapper progress-build__slider_wrapper">
+                        <a href="img/progress-build/image1.jpg" class="swiper-slide progress-build__slider_slide" data-fancybox="progress-build">
+                            <img src="img/progress-build/image1.jpg" alt="Ход строительства">
+                            <p>
+                                месяц / год
+                            </p>
+                        </a>
+                        <a href="img/progress-build/image2.jpg" class="swiper-slide progress-build__slider_slide" data-fancybox="progress-build">
+                            <img src="img/progress-build/image2.jpg" alt="Ход строительства">
+                            <p>
+                                месяц / год
+                            </p>
+                        </a>
+                        <a href="img/progress-build/image3.jpg.jpg" class="swiper-slide progress-build__slider_slide" data-fancybox="progress-build">
+                            <img src="img/progress-build/image3.jpg" alt="Ход строительства">
+                            <p>
+                                месяц / год
+                            </p>
+                        </a>
+                        <a href="img/progress-build/image4.jpg" class="swiper-slide progress-build__slider_slide" data-fancybox="progress-build">
+                            <img src="img/progress-build/image4.jpg" alt="Ход строительства">
+                            <p>
+                                месяц / год
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-prev slider-button-prev progress-build__slider-button-prev">
+                    <img src="img/news/arrow-prev.svg" alt="prev">
+                </div>
+                <div class="swiper-button-next slider-button-next progress-build__slider-button-next">
+                    <img src="img/news/arrow-next.svg" alt="next">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section facing">
+        <div class="container-fluid">
+            <h2 class="section__title">
+                Квартиры с отделкой. Что входит в отделку
+            </h2>
+            <div class="row">
+                <div class="col-sm-4 col-lg-2">
+                    <div class="facing__item">
+                        <div class="facing__img">
+                            <img class="" src="img/facing/laminate.svg" alt="Квартиры с отделкой">
+                        </div>
+                        <p class="facing__desc">
+                            Пол комнаты, кухня, коридор -  ламинат
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="facing__item">
+                        <div class="facing__img">
+                            <img class="" src="img/facing/wallpaper.svg" alt="Квартиры с отделкой">
+                        </div>
+                        <p class="facing__desc">
+                            Стены - обои
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="facing__item">
+                        <div class="facing__img">
+                            <img class="" src="img/facing/tile.svg" alt="Квартиры с отделкой">
+                        </div>
+                        <p class="facing__desc">
+                            Санузел - пол - плитка, стены окрашены, вся сантехника
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="facing__item">
+                        <div class="facing__img">
+                            <img class="" src="img/facing/roof.svg" alt="Квартиры с отделкой">
+                        </div>
+                        <p class="facing__desc">
+                            Потолок натяжной
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="facing__item">
+                        <div class="facing__img">
+                            <img class="" src="img/facing/rossete.svg" alt="Квартиры с отделкой">
+                        </div>
+                        <p class="facing__desc">
+                            Электроразводка по всей квартире
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="facing__item">
+                        <div class="facing__img">
+                            <img class="" src="img/facing/boiler.svg" alt="Квартиры с отделкой">
+                        </div>
+                        <p class="facing__desc">
+                            Газовый котел
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section standard-design">
+        <h2 class="section__title standard-design__title">
+            Пример стандартного дизайн-проекта
+        </h2>
+        <div class="standard-design__slider">
+            <div class="swiper-container standard-design__slider_container">
+                <div class="swiper-wrapper standard-design__slider_wrapper">
+                    <a href="img/standart-design/image1.jpg" class="swiper-slide standard-design__slider_slide" data-fancybox="standard-design">
+                        <img src="img/standart-design/image1.jpg" alt="Стандартный дизайн">
+                    </a>
+                    <a href="img/standart-design/image1.jpg" class="swiper-slide standard-design__slider_slide" data-fancybox="standard-design">
+                        <img src="img/standart-design/image1.jpg" alt="Стандартный дизайн">
+                    </a>
+                    <a href="img/standart-design/image1.jpg" class="swiper-slide standard-design__slider_slide" data-fancybox="standard-design">
+                        <img src="img/standart-design/image1.jpg" alt="Стандартный дизайн">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-button-prev slider-button-prev standard-design__slider-button-prev">
+                <img src="img/news/arrow-prev.svg" alt="prev">
+            </div>
+            <div class="swiper-button-next slider-button-next standard-design__slider-button-next">
+                <img src="img/news/arrow-next.svg" alt="next">
+            </div>
+        </div>
+    </section>
+    <section class="section excursion">
+        <div class="container-fluid">
+            <h2 class="excursion__title">
+                СЛОЖНО СДЕЛАТЬ ВЫБОР? Запишитесь на экскурсию!
+            </h2>
+            <div class="row">
+                <div class="col-xl-4">
+                    <form action="#" class="form excursion__form">
+                        <div class="controls">
+                            <input type="text" name="object" value="" placeholder="Выберите объект" class="form__input">
+                            <span class="error_name"></span>
+                        </div>
+                        <div class="controls">
+                            <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input">
+                            <span class="error_name"></span>
+                        </div>
+                        <div class="controls">
+                            <input type="tel" name="phone" value="" placeholder="Номер телефона" class="form__input">
+                            <span class="error_phone"></span>
+                        </div>
+                        <div class="controls">
+                            <input type="tel" name="date" value="" placeholder="Дата" class="form__input">
+                            <span class="error_phone"></span>
+                        </div>
+                        <button type="submit" class="form__btn btn excursion__btn">
+                            Подобрать квартиру
+                        </button>
+                    </form>
+                </div>
+                <div class="col-xl-8">
+                    <div class="excursion__img_wrap">
+                        <div class="circle circle-white excursion__circle-white"></div>
+                        <div class="excursion__img">
+                            <img src="img/forms/excursion-bg.png" alt="Записаться на кскурсию">
+                            <div class="disk excursion__disk-blue"></div>
+                            <div class="rectangle excursion__rectangle "></div>
+                            <div class="disk excursion__disk"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container-fuid">
+            <h2 class="section__title">
+                Ипотечный калькулятор
+            </h2>
+        </div>
+    </section>
+    <section class="section questions">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4">
+                    <h2 class="form__title">
+                        Остались вопросы?
+                    </h2>
+                    <p class="form__subtitle">
+                        Свяжитесь с нашими менеджерами
+                    </p>
+                    <p class="form__description">
+                        Оставьте заявку<br>и мы перезвоним Вам в течение часа
+                    </p>
+                    <form action="#" class="form">
+                        <div class="controls">
+                            <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input">
+                            <span class="error_name"></span>
+                        </div>
+                        <div class="controls">
+                            <input type="tel" name="phone" value="" placeholder="Номер телефона" class="form__input">
+                            <span class="error_phone"></span>
+                        </div>
+                        <button type="submit" class="form__btn btn">
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+                <div class="col-xl-8">
+                    <div class="questions__contacts_wrap">
+                        <ul class="questions__contacts">
+                            <li class="questions__item">
+                                <div class="questions__item_icon">
+                                    <img src="img/forms/phone-icon.svg" alt="89999999999">
+                                </div>
+                                <a href="tel:89999999999">
+                                    8 (999) 999-99-99
+                                </a>
+                            </li>
+                            <li class="questions__item">
+                                <div class="questions__item_icon">
+                                    <img src="img/forms/mail-icon.svg" alt="info@site.ru">
+                                </div>
+                                <a href="mailto:info@site.ru">
+                                    info@site.ru
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="disk disk-questions"></div>
+                        <div class="circle circle-white circle-questions"></div>
+                        <div class="rectangle rectangle-orange rectangle-orange-questions"></div>
+                        <div class="rectangle rectangle-blue rectangle-blue-questions"></div>
+                        <div class="questions__contacts_img">
+                            <img src="img/forms/questions-bg.png" alt="Возникли вопросы">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section documents">
+        <div class="container-fluid">
+            <h2 class="section__title">
+                Документы
+            </h2>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="documents__item documents__item-first">
+                        <img src="img/documents/documents-icon.svg" alt="Документы" class="documents__item_icon">
+                        <p class="documents__item_title">
+                            Разрешение на<br>строительство
+                        </p>
+                        <a href="#" class="btn documents__item_btn">
+                            скачать pdf-файл
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="documents__item documents__item-second">
+                        <img src="img/documents/documents-icon.svg" alt="Документы" class="documents__item_icon">
+                        <p class="documents__item_title">
+                            Проектная<br>декларация
+                        </p>
+                        <a href="#" class="btn documents__item_btn">
+                            скачать pdf-файл
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="documents__item">
+                        <img src="img/documents/documents-icon.svg" alt="Документы" class="documents__item_icon">
+                        <p class="documents__item_title">
+                            Заключение<br>ДСА
+                        </p>
+                        <a href="#" class="btn documents__item_btn">
+                            скачать pdf-файл
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+<footer class="footer" id="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <ul class="footer__contacts_wrap">
+                    <li class="footer__contacts_wrap_item">
+                        <a href="/" class="footer__contacts_title">
+                            ООО "Уником"
+                        </a>
+                    </li>
+                    <li class="footer__contacts_wrap_item">
+                        <ul class="footer__contacts_list">
+                            <li class="footer__contacts_list_item">
+                                г.Муром, ул. Воровского, 46А
+                            </li>
+                            <li class="footer__contacts_list_item">
+                                <a href="tel:+79308300769">
+                                    +7 (930) 830-07-69
+                                </a>
+                            </li>
+                            <li class="footer__contacts_list_item">
+                                <a href="tel:+79157764636">
+                                    +7 (915) 776-46-36
+                                </a>
+                            </li>
+                            <li class="footer__contacts_list_item">
+                                <a href="mailto:1okc33@list.ru">
+                                    1okc33@list.ru
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__contacts_wrap_item">
+                        <p class="footer__contacts_operating_title">
+                            Режим работы
+                        </p>
+                        <p class="footer__contacts_operating_days">
+                            пн-пт
+                        </p>
+                        <p class="footer__contacts_operating_hours">
+                            с 08:00-17:00
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-lg-5">
+                <nav class="footer__menu">
+                    <div class="footer__menu_list">
+                        <ul class="footer__menu_item_wrap">
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Объекты
+                                </a>
+                                <ul class="footer__submenu_list">
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Строящиеся объекты
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Готовые объекты
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Генеральный план застройки
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Подбор квартиры
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Общий вид дома
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Выбрать квартиру
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Ход строительства
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Квартиры с отделкой
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Ипотечный калькулятор
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Документы
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="footer__menu_item_wrap">
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Ипотека
+                                </a>
+                                <ul class="footer__submenu_list">
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Модуль расчета ипотеки
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Необходимые документы
+                                        </a>
+                                    </li>
+                                    <li class="footer__submenu_item">
+                                        <a href="#">
+                                            Банки - партнеры
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Вакансии
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="footer__menu_item">
+                                <a href="/" class="footer__menu_item_link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="footer__logo">
+                    <img src="img/footer/footer-logo.svg" alt="Уником">
+                </div>
+                <div class="footer__logo_text">
+                    <p>
+                        Мы заботимся
+                    </p>
+                    <p>
+                        О вашем здоровье
+                    </p>
+                </div>
+                <button class="btn footer__btn">
+                    Подобрать квартиру
+                </button>
+            </div>
+        </div>
+        <ul class="footer__social_list">
+            <li class="footer__social_item">
+                <a href="#">
+                    <img src="img/footer/facebook.svg" alt="Мы в Facebook">
+                </a>
+            </li>
+            <li class="footer__social_item">
+                <a href="#">
+                    <img src="img/footer/instagram.svg" alt="Мы в Instagram">
+                </a>
+            </li>
+            <li class="footer__social_item">
+                <a href="#">
+                    <img src="img/footer/vk.svg" alt="Мы в Vk">
+                </a>
+            </li>
+            <li class="footer__social_item">
+                <a href="#">
+                    <img src="img/footer/youtube.svg" alt="Мы в YouTube">
+                </a>
+            </li>
+        </ul>
+        <div class="copyright">
+            <p class="copyright__developer">
+                API Media - разработка и продвижение
+            </p>
+            <p class="copyright__customer">
+                Официальный сайт ЖК Новая Слобода
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/scripts.min.js"></script>
+
+
+
+
+</body>
+</html>

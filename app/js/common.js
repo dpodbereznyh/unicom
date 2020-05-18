@@ -81,7 +81,78 @@ $(document).ready(function () {
                 spaceBetween: 32
             }
         }
-    })
+    });
+
+//General View Swiper Slider
+    var GeneralViewSlider = new Swiper ('.general-view__slider_container', {
+        slideClass: 'general-view__slider_slide',
+        wrapperClass: 'general-view__slider_wrapper',
+        slidesPerView: 1,
+        lazy: {
+            loadPrevNext: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.general-view__slider_button-next',
+            prevEl: '.general-view__slider_button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
+    });
+//Progress Build Slider
+    var progressBuildSlider = new Swiper ('.progress-build__slider_container', {
+        slideClass: 'progress-build__slider_slide',
+        wrapperClass: 'progress-build__slider_wrapper',
+        slidesPerView: 1,
+        spaceBetween: 10,
+        lazy: {
+            loadPrevNext: true,
+        },
+        navigation: {
+            nextEl: '.progress-build__slider-button-next',
+            prevEl: '.progress-build__slider-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            577: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            993: {
+                slidesPerView: 3,
+                spaceBetween: 10
+            },
+            1201: {
+                slidesPerView: 4,
+                spaceBetween: 32
+            }
+        }
+    });
+//Progress Build Slider
+    var standardDesignSlider = new Swiper ('.standard-design__slider_container', {
+        slideClass: 'standard-design__slider_slide',
+        wrapperClass: 'standard-design__slider_wrapper',
+        slidesPerView: 1,
+        lazy: {
+            loadPrevNext: true,
+        },
+        navigation: {
+            nextEl: '.standard-design__slider-button-next',
+            prevEl: '.standard-design__slider-button-prev',
+        }
+    });
+
 //Objects Toggle
     $('.objects__select_item').click(function () {
         if ($('#objects__ready').is(':checked')){
@@ -96,6 +167,62 @@ $(document).ready(function () {
 
     $('.advanced-search__btn').click(function () {
         $('.advanced-search').toggleClass('d-none');
+
     });
 });
 
+//ucalc
+
+// 'use strict';
+// var _typeof = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function(obj) {
+//         return typeof obj
+//     }
+//     : function(obj) {
+//         return obj && 'function' == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj
+//     }
+// ;
+// define('widget-ucalc-view', ['jquery'], function(a) {
+//     function b(f, g) {
+//         var h = a('#' + g);
+//         return h && 0 != h.length ? {
+//             update: function update() {}
+//         } : (console.log('el not found: ' + g),
+//             {
+//                 update: function update() {}
+//             })
+//     }
+//     function c(f) {
+//         'object' != _typeof(f.data) || null === f.data || !0 !== f.data.ucalc || 0 < parseInt(f.data.id) && 0 < parseInt(f.data.height) && a('.js-w-ucalc-iframe-' + f.data.id).height(f.data.height)
+//     }
+//     var d = {
+//         name: 'ucalc-view',
+//         widgets: {},
+//         update: function update(f, g) {
+//             this.widgets[f] && this.widgets[f].update(g)
+//         },
+//         open: function open(f) {
+//             this.widgets[f] = b(this, f)
+//         },
+//         close: function close(f) {
+//             delete this.widgets[f]
+//         }
+//     };
+//     return window.constructorMode && a(window).on('widgetRemoved.ucalc', function(f, g) {
+//         d.close(g)
+//     }),
+//     window.constructorMode && a(document).on('beforeChangePage.ucalc', function() {
+//         Object.keys(d.widgets).forEach(function(f) {
+//             d.close(f)
+//         })
+//     }),
+//         window.addEventListener ? window.addEventListener('message', c, !1) : window.attachEvent('onmessage', c),
+//         a('.ul-w-ucalc iframe').each(function() {
+//             var f = this.contentWindow;
+//             f && f.postMessage('getHeight', '*')
+//         }),
+//         a(document).on('click', '.ul-w-ucalc .js-ucalc-link', function() {
+//             var f = window.open('https://ucalc.pro', '_blank');
+//             f.focus()
+//         }),
+//         d
+// });
