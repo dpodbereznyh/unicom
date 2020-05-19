@@ -5,16 +5,16 @@
   font-size: 20px;
   line-height: 23px;
   color: $neutral;
+  border: none;
   background: $logo2;
-  border: 2px solid $logo2;
   border-radius: 7px;
   padding: 12px 16px;
   box-shadow: 0px 10px 25px rgba(18, 133, 196, 0.5);
   transition: all 0.3s ease;
   text-align: center;
   &:hover {
-    background: $neutral;
-    color: $logo2;
+    background: darken($logo2, 20%);
+    color: $neutral;
     transition: all 0.3s ease;
   }
   &:focus {

@@ -54,13 +54,11 @@
       background: $logo2;
       box-shadow: 0px 10px 25px rgba(18, 133, 196, 0.5);
       border-radius: 7px;
-      border: 2px solid $logo2;
       margin: 0 auto;
       transition: all 0.3s ease;
       &:hover {
-        background: $neutral;
-        color: $logo2;
-        transition: all 0.3s ease;
+        background: darken($logo2, 20%);
+        color: $neutral;
       }
     }
   }
@@ -262,7 +260,6 @@
     &:hover {
       background: darken($logo2, 20%);
       color: $neutral;
-      border: 2px solid darken($logo2, 20%);
     }
   }
   &__list {

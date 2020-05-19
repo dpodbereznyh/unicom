@@ -277,7 +277,6 @@
   }
   &__item_btn {
     width: 202px;
-    //height: 47px;
     display: block;
     margin: 0 auto;
   }
@@ -297,8 +296,13 @@
 }
 
 //Select Flat
+.select-flat__select_wrap {
+  display: flex;
+  flex-direction: column;
+}
 .select-porch {
   display: flex;
+  margin-bottom: 32px;
   &__title {
     width: 95px;
     @include blockText;
@@ -332,8 +336,144 @@
     }
   }
 }
+.flat__status {
+  &_list {
+    display: flex;
+    margin-bottom: 32px;
+  }
+  &_color {
+    width: 47px;
+    height: 47px;
+    border-radius: 15px;
+    margin-right: 32px;
+    &-free {
+      background: $akcent2;
+    }
+    &-sales {
+      background: $akcent8;
+    }
+    &-reserved {
+      background: $akcent5;
+    }
+  }
+  &_item {
+    margin-right: 64px;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-right: 0;
+    }
+    input {
+      display: none;
+      &:checked ~ label {
+        color: $logo2;
+      }
+    }
+    label {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      cursor: pointer;
+    }
+  }
+}
 .select-flat {
-
+  padding: 32px 0 144px;
+  >.container-fluid {
+    position: relative;
+  }
+  &__circle-orange {
+    position: absolute;
+    top: 137px;
+    right: 58px;
+    transform: rotate(-90deg);
+    margin-bottom: 0;
+  }
+  &__circle-blue {
+    position: absolute;
+    bottom: -300px;
+    left: 62px;
+    transform: rotate(90deg);
+  }
+}
+.flat__result {
+  &_wrap {
+    border: 1px solid $akcentDark;
+  }
+  &_row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $akcentDark;
+    &:last-child {
+      border-bottom: none;
+    }
+    &_title {
+      display: block;
+      @include blockText;
+      color: $akcentDark;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+  }
+  &_list {
+    display: flex;
+  }
+  &_item {
+    padding: 13px 27px 29px;
+    width: 265px;
+    height: 190px;
+    border-left: 1px solid $akcentDark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_item_head {
+    display: flex;
+    justify-content: space-between;
+    @include secondaryTitle;
+    color: $akcentDark;
+    width: 100%;
+  }
+  &_item_body {
+    @include blockText;
+    color: $akcentDark;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  &_item_link {
+    display: block;
+    @include blockText;
+    color: $akcentDark;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+@include desktop {
+  .flat__result_row {
+    flex-direction: column;
+  }
+  .flat__result_row_title {
+    height: 59px;
+  }
+  .flat__result_list {
+    border-top: 1px solid $akcentDark;
+  }
+  .flat__result_item {
+    &:first-child {
+      border-left: none;
+    }
+  }
+  .flat__result_wrap {
+    width: 100%;
+  }
+  .flat__result_item {
+    width: 25%;
+  }
 }
 @include tablet {
   .select-porch {
@@ -351,13 +491,56 @@
   .select-porch__item {
     margin-right: 0;
   }
+  .flat__status_list {
+    justify-content: space-around;
+  }
+  .flat__status_item {
+    margin-right: 0;
+  }
+  .flat__result_list {
+    flex-wrap: wrap;
+  }
+  .flat__result_item {
+    width: 50%;
+  }
+  .flat__result_list {
+    border: none;
+  }
+  .flat__result_item {
+    border-top: 1px solid $akcentDark;
+    border-left: none;
+    &:nth-child(odd) {
+      border-right: 1px solid $akcentDark;
+    }
+  }
+  .select-flat__circle-orange, .select-flat__circle-blue {
+    display: none;
+  }
+  .select-flat {
+    padding: 32px 0 32px;
+  }
 }
 @include phones {
   .select-porch__list {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .select-porch__item {
     margin-bottom: 16px;
+  }
+  .flat__status_list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .flat__status_item {
+    margin-bottom: 32px;
+  }
+  .flat__result_item {
+    width: 100%;
+  }
+  .flat__result_item {
+    &:nth-child(odd) {
+      border-right: none;
+    }
   }
 }
