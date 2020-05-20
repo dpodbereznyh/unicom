@@ -148,11 +148,12 @@
   .popup-result__body {
     min-height: 390px;
   }
+  .popup-result {
+    max-height: 100vh;
+    overflow: auto;
+  }
 }
 @include tablet {
-  .popup-result {
-    max-height: fit-content;
-  }
   .popup-result__body {
     flex-direction: column;
     align-items: center;
