@@ -44,6 +44,13 @@ $(document).ready(function () {
             });
         }
     });
+// Popup
+    $('.flat__result_item_link').on("click", function () {
+        $('#popup-result').show();
+    });
+    $('.popup-result__close').on("click", function () {
+        $('#popup-result').hide();
+    });
 
 //News Swiper Slider
     var myNewsSlider = new Swiper ('.news__slider_container', {
@@ -170,59 +177,3 @@ $(document).ready(function () {
 
     });
 });
-
-//ucalc
-
-// 'use strict';
-// var _typeof = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function(obj) {
-//         return typeof obj
-//     }
-//     : function(obj) {
-//         return obj && 'function' == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj
-//     }
-// ;
-// define('widget-ucalc-view', ['jquery'], function(a) {
-//     function b(f, g) {
-//         var h = a('#' + g);
-//         return h && 0 != h.length ? {
-//             update: function update() {}
-//         } : (console.log('el not found: ' + g),
-//             {
-//                 update: function update() {}
-//             })
-//     }
-//     function c(f) {
-//         'object' != _typeof(f.data) || null === f.data || !0 !== f.data.ucalc || 0 < parseInt(f.data.id) && 0 < parseInt(f.data.height) && a('.js-w-ucalc-iframe-' + f.data.id).height(f.data.height)
-//     }
-//     var d = {
-//         name: 'ucalc-view',
-//         widgets: {},
-//         update: function update(f, g) {
-//             this.widgets[f] && this.widgets[f].update(g)
-//         },
-//         open: function open(f) {
-//             this.widgets[f] = b(this, f)
-//         },
-//         close: function close(f) {
-//             delete this.widgets[f]
-//         }
-//     };
-//     return window.constructorMode && a(window).on('widgetRemoved.ucalc', function(f, g) {
-//         d.close(g)
-//     }),
-//     window.constructorMode && a(document).on('beforeChangePage.ucalc', function() {
-//         Object.keys(d.widgets).forEach(function(f) {
-//             d.close(f)
-//         })
-//     }),
-//         window.addEventListener ? window.addEventListener('message', c, !1) : window.attachEvent('onmessage', c),
-//         a('.ul-w-ucalc iframe').each(function() {
-//             var f = this.contentWindow;
-//             f && f.postMessage('getHeight', '*')
-//         }),
-//         a(document).on('click', '.ul-w-ucalc .js-ucalc-link', function() {
-//             var f = window.open('https://ucalc.pro', '_blank');
-//             f.focus()
-//         }),
-//         d
-// });
