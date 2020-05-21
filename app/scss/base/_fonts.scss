@@ -1,5 +1,6 @@
 @import "../abstracts/mixins";
 
+@include font-face("Roboto", "../fonts/Roboto/Roboto-Thin", 300);
 @include font-face("Roboto", "../fonts/Roboto/Roboto-Light", lighter);
 @include font-face("Roboto", "../fonts/Roboto/Roboto-Regular", normal);
 @include font-face("Roboto", "../fonts/Roboto/Roboto-Medium", medium);

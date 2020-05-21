@@ -146,7 +146,7 @@ $(document).ready(function () {
             }
         }
     });
-//Progress Build Slider
+//Standard Design Slider
     var standardDesignSlider = new Swiper ('.standard-design__slider_container', {
         slideClass: 'standard-design__slider_slide',
         wrapperClass: 'standard-design__slider_wrapper',
@@ -157,6 +157,39 @@ $(document).ready(function () {
         navigation: {
             nextEl: '.standard-design__slider-button-next',
             prevEl: '.standard-design__slider-button-prev',
+        }
+    });
+
+//Banks Slider
+    var banksSlider = new Swiper ('.bank__slider_container', {
+        slideClass: 'bank__slider_slide',
+        wrapperClass: 'bank__slider_wrapper',
+        slidesPerView: 1,
+        spaceBetween: 10,
+        lazy: {
+            loadPrevNext: true,
+        },
+        navigation: {
+            nextEl: '.bank__slider-button-next',
+            prevEl: '.bank__slider-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            577: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            993: {
+                slidesPerView: 3,
+                spaceBetween: 10
+            },
+            1201: {
+                slidesPerView: 4,
+                spaceBetween: 32
+            }
         }
     });
 

@@ -8,7 +8,6 @@
     <link rel="apple-touch-icon" href="img/header/header_logo.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/header/header_logo.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/header/header_logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
     <title>Дом | ЖК УНИКОМ</title>
 </head>
@@ -287,15 +286,15 @@
                 </p>
                 <ul class="select-porch__list">
                     <li class="select-porch__item">
-                        <input id="first-porch" type="checkbox" name="select-porch" checked>
+                        <input id="first-porch" type="radio" name="select-porch" checked>
                         <label for="first-porch">1 подъезд</label>
                     </li>
                     <li class="select-porch__item">
-                        <input id="second-porch" type="checkbox" name="select-porch">
+                        <input id="second-porch" type="radio" name="select-porch">
                         <label for="second-porch">2 подъезд</label>
                     </li>
                     <li class="select-porch__item">
-                        <input id="third-porch" type="checkbox" name="select-porch">
+                        <input id="third-porch" type="radio" name="select-porch">
                         <label for="third-porch">3 подъезд</label>
                     </li>
                 </ul>
@@ -303,18 +302,15 @@
             <ul class="flat__status_list">
                 <li class="flat__status_item">
                     <div class="flat__status_color flat__status_color-free"></div>
-                    <input id="flat-free" type="checkbox" name="flat-status">
-                    <label for="flat-free">свободно</label>
+                    свободно
                 </li>
                 <li class="flat__status_item">
                     <div class="flat__status_color flat__status_color-sales"></div>
-                    <input id="flat-sales" type="checkbox" name="flat-status">
-                    <label for="flat-sales">продано</label>
+                    продано
                 </li>
                 <li class="flat__status_item">
                     <div class="flat__status_color flat__status_color-reserved"></div>
-                    <input id="flat-reserved" type="checkbox" name="flat-status">
-                    <label for="flat-reserved">забронировано</label>
+                    забронировано
                 </li>
             </ul>
             <ul class="flat__result_wrap">
@@ -707,7 +703,7 @@
         </div>
     </section>
     <section class="section">
-        <!--<div class="container-fuid">-->
+        <div class="container-fuid">
             <h2 class="section__title">
                 Ипотечный калькулятор
             </h2>
@@ -734,14 +730,10 @@
 
                             })();
                         </script>
-
-
-
                     </div></div></div>
                 </div>
             </div>
-
-        <!--</div>-->
+        </div>
     </section>
     <section class="section questions">
         <div class="container-fluid">
@@ -844,8 +836,51 @@
             </div>
         </div>
     </section>
-
-
+    <div class="popup-result__overlay" id="popup-result">
+        <div  class="popup-result">
+            <div class="popup-result__close">+</div>
+            <div class="popup-result__head">
+                <div class="popup-result__logo">
+                    <img src="img/popup/popup-logo.jpg" alt="Новая слобода">
+                </div>
+                <div class="popup-result__address">
+                    <p class="popup-result__address_porch">
+                        1 подъезд
+                    </p>
+                    <p class="popup-result__address_flat">
+                        № 15
+                    </p>
+                </div>
+            </div>
+            <div class="popup-result__body">
+                <a href="img/popup/plan.jpg" data-fancybox="plane" class="popup-result__plane">
+                    <img src="img/popup/plan.jpg" alt="План">
+                </a>
+                <div class="popup-result__info">
+                    <ul class="popup-result__info_area">
+                        <li>Общая площадь - 55 кв.м</li>
+                        <li>Жилая площадь - 30 кв.м</li>
+                    </ul>
+                    <ul class="popup-result__info_flat">
+                        <li>1-комнатная квартира</li>
+                        <li>1 квартал, дом 5</li>
+                        <li>Этаж 2</li>
+                    </ul>
+                    <div class="popup-result__buttons">
+                        <a href="#" class="btn">
+                            задать вопрос
+                        </a>
+                        <a href="#" class="btn">
+                            рассчитать ипотеку
+                        </a>
+                        <a href="#" class="btn">
+                            записаться на просмотр
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 <footer class="footer" id="footer">
     <div class="container-fluid">
@@ -1060,51 +1095,7 @@
         </div>
     </div>
 </footer>
-<div class="popup-result__overlay" id="popup-result">
-    <div  class="popup-result">
-        <div class="popup-result__close">+</div>
-        <div class="popup-result__head">
-            <div class="popup-result__logo">
-                <img src="img/popup/popup-logo.jpg" alt="Новая слобода">
-            </div>
-            <div class="popup-result__address">
-                <p class="popup-result__address_porch">
-                    1 подъезд
-                </p>
-                <p class="popup-result__address_flat">
-                    № 15
-                </p>
-            </div>
-        </div>
-        <div class="popup-result__body">
-            <a href="img/popup/plan.jpg" data-fancybox="plane" class="popup-result__plane">
-                <img src="img/popup/plan.jpg" alt="План">
-            </a>
-            <div class="popup-result__info">
-                <ul class="popup-result__info_area">
-                    <li>Общая площадь - 55 кв.м</li>
-                    <li>Жилая площадь - 30 кв.м</li>
-                </ul>
-                <ul class="popup-result__info_flat">
-                    <li>1-комнатная квартира</li>
-                    <li>1 квартал, дом 5</li>
-                    <li>Этаж 2</li>
-                </ul>
-                <div class="popup-result__buttons">
-                    <a href="#" class="btn">
-                        задать вопрос
-                    </a>
-                    <a href="#" class="btn">
-                        рассчитать ипотеку
-                    </a>
-                    <a href="#" class="btn">
-                        записаться на просмотр
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <script src="js/scripts.min.js"></script>
 

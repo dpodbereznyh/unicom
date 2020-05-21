@@ -134,7 +134,7 @@
     }
     &_item-cost {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       width: 182px;
       border-top: 1px solid $akcent10;
       border-bottom: 1px solid $akcent10;
@@ -186,21 +186,27 @@
   .parameters__btn {
     margin: 25px auto;
   }
-  .parameters__subtitle {
-    margin-right: unset;
+  .parameters__block_item-cost > input::placeholder {
+    font-size: 16px;
   }
-}
-@include laptop {
   .parameters__block_list-rooms, .parameters__block_list-cost {
     justify-content: center;
   }
   .parameters__block-cost {
     margin-top: 25px;
   }
+  .parameters__subtitle {
+    text-align: center;
+    margin-bottom: 64px;
+    margin-right: 0;
+  }
+}
+@include laptop {
+
 }
 @include phones {
   .parameters__block_list-rooms {
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
   }
   .parameters__block_item-rooms {
@@ -367,20 +373,30 @@
   .advanced-search__block-area {
     margin-bottom: 25px;
   }
+  .advanced-search__block-area {
+    margin-left: auto;
+    margin-bottom: 32px;
+  }
+  .advanced-search__block-floor {
+    margin: 0 auto 32px;
+  }
 }
 @include tablet {
   .advanced-search__block_item-floor label {
     padding: 16px 30px;
   }
   .advanced-search__block select {
-    width: 288px;
+    width: 100%;
     display: block;
-    margin: 0 auto 25px;
+    //margin: 0 auto 25px;
   }
 }
 @include phones{
   .advanced-search__block-area {
     margin: 0 auto 25px;
+  }
+  .advanced-search__block_list-area {
+    width: 280px;
   }
   .advanced-search__block_item-area {
     width: 50%;
@@ -388,20 +404,22 @@
   .advanced-search__block_item-area input::placeholder {
     font-size: 16px;
   }
-  .advanced-search__block_list {
-    flex-wrap: wrap;
+  .advanced-search__block_item-floor label {
+    width: 150px;
+    height: 57px;
+    margin-bottom: 16px;
     text-align: center;
-    justify-content: center;
-  }
-  .advanced-search__block_item-floor {
-    margin: 0 0 16px 0;
-    label {
-      width: 150px;
-      height: 57px;
-    }
   }
   .advanced-search__res_btn {
     margin: 0 auto 32px;
+  }
+  .advanced-search__block_list-floor {
+    flex-direction: column;
+  }
+  .advanced-search__block-sel {
+    width: 280px;
+    margin: 0 auto;
+    margin-bottom: 32px;
   }
 }
 

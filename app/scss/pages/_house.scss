@@ -360,22 +360,13 @@
     margin-right: 64px;
     display: flex;
     align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
     &:last-child {
       margin-right: 0;
-    }
-    input {
-      display: none;
-      &:checked ~ label {
-        color: $logo2;
-      }
-    }
-    label {
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 18px;
-      cursor: pointer;
     }
   }
 }
@@ -534,6 +525,9 @@
   }
   .flat__status_item {
     margin-bottom: 32px;
+  }
+  .flat__status_color {
+    margin-right: 16px;
   }
   .flat__result_item {
     width: 100%;

@@ -282,3 +282,51 @@
     max-width: 290px;
   }
 }
+
+//Banks
+
+.bank__slider {
+  width: 100%;
+  position: relative;
+  &_container {
+    max-width: 1284px;
+    width: 100%;
+  }
+  &_wrapper {
+    width: 100%;
+  }
+  &_slide {
+    display: inline-block;
+    @include blockText;
+    color: $akcentDark;
+    text-decoration: none;
+    text-align: center;
+    max-width: 225px;
+    margin: 0 auto;
+  }
+  &_logo {
+    height: 150px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      display: block;
+    }
+  }
+  &_title {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 8px;
+  }
+  &_desc {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

@@ -20,14 +20,12 @@
   &__close {
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    background: $neutral;
-    font-size: 25px;
-    color: $akcentDark;
+    background: $akcentDark;
+    font-size: 21px;
+    color: $neutral;
     position: absolute;
-    right: 5px;
-    top: -25px;
-    transform: rotate(45deg);
+    right: 0;
+    top: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -53,7 +51,7 @@
   &__address {
     width: 80px;
     height: 80px;
-    background: $akcentDark;
+    background: $logo1;
     color: $neutral;
     text-align: center;
     display: flex;
@@ -141,7 +139,7 @@
 }
 @include desktop {
   .popup-result {
-    padding: 30px;
+    padding: 40px 30px 30px;
   }
 }
 @include laptop {

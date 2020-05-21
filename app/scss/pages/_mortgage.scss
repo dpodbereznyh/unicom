@@ -1,0 +1,45 @@
+.mortgage-documents {
+  position: relative;
+  &-circle {
+    position: absolute;
+    top: 107px;
+    left: 174px;
+    margin-bottom: 0;
+    transform: rotate(90deg);
+  }
+  &__wrap {
+    display: flex;
+  }
+  &__icon {
+    width: 57%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      //width: 218px;
+      //height: 118px;
+      display: inline-block;
+    }
+  }
+  &__list {
+
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    @include secondaryTitle;
+    color: $akcentDark;
+    margin-bottom: 16px;
+    span {
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      background: $akcent1;
+      margin-right: 39px;
+    }
+    p {
+      width: 99%;
+    }
+  }
+}
