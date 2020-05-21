@@ -1,0 +1,127 @@
+.vacancy {
+  &__title {
+    @include blockText;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  &__item {
+    margin-bottom: 32px;
+  }
+  &__item-active {
+    border: 2px solid $logo1;
+    padding-bottom: 64px;
+  }
+  &__item_head {
+    background: $logo1;
+    padding: 32px 64px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item_head-active {
+    padding: 64px 64px 0;
+    background: none;
+  }
+  &__item_title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 32px;
+    color: $neutral;
+  }
+  &__item_title-active {
+    color: $logo2;
+    margin-bottom: 32px;
+  }
+  &__item_title_down {
+    display: flex;
+    align-items: center;
+    p {
+      @include blockText;
+      color: $neutral;
+      margin-right: 16px;
+    }
+    > .icon-chevron-down {
+      &:before {
+        font-size: 12px;
+      }
+    }
+  }
+  &__item_body {
+    padding: 0 64px;
+    > p {
+      font-weight: 500;
+      font-size: 27px;
+      line-height: 32px;
+      color: #000;
+      margin-bottom: 32px;
+    }
+    li {
+      @include blockText;
+      color: $akcentDark;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      span {
+        display: block;
+        min-width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $akcent1;
+        margin-right: 32px;
+      }
+      > p {
+        @include blockText;
+        color: $akcentDark;
+      }
+    }
+  }
+  &__item-btn {
+    width: 165px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+  &__item_title_up {
+    @include blockText;
+    color: $logo2;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    p {
+      margin-right: 32px;
+    }
+    > .icon-chevron-down {
+      &:before {
+        color: $logo2;
+        font-size: 12px;
+      }
+
+    }
+  }
+}
+@include tablet {
+  .vacancy__item_head-active {
+    padding: 64px 32px 0;
+  }
+  .vacancy__item_body {
+    padding: 0 32px;
+  }
+  .vacancy__item_head {
+    padding: 32px;
+  }
+}
+@include phones {
+  .vacancy__item_head-active {
+    padding: 32px 16px 0;
+  }
+  .vacancy__item_body {
+    padding: 0 16px;
+  }
+  .vacancy__item_body li span {
+    margin-right: 16px;
+  }
+  .vacancy__item_head {
+    padding: 16px;
+  }
+}
