@@ -284,7 +284,9 @@
 }
 
 //Banks
-
+.bank {
+  padding: 50px 0 65px;
+}
 .bank__slider {
   width: 100%;
   position: relative;
@@ -296,13 +298,13 @@
     width: 100%;
   }
   &_slide {
-    display: inline-block;
+    display: block;
     @include blockText;
     color: $akcentDark;
     text-decoration: none;
     text-align: center;
-    max-width: 225px;
-    margin: 0 auto;
+    //max-width: 225px;
+    //margin: 0 auto;
   }
   &_logo {
     height: 150px;
@@ -328,5 +330,28 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
+  }
+}
+@include desktop {
+  .bank__slider_container {
+    max-width: 960px;
+  }
+}
+@include laptop {
+  .bank__slider_container {
+    max-width: 720px;
+  }
+}
+@include tablet {
+  .bank__slider_container {
+    max-width: 540px;
+  }
+}
+@include phones {
+  .bank__slider_container {
+    max-width: 290px;
+  }
+  .bank__slider_slide {
+    width: 100%;
   }
 }

@@ -182,13 +182,17 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 spaceBetween: 20
             },
-            993: {
+            768: {
                 slidesPerView: 3,
                 spaceBetween: 10
             },
-            1201: {
+            993: {
                 slidesPerView: 4,
-                spaceBetween: 32
+                spaceBetween: 10
+            },
+            1300: {
+                slidesPerView: 4,
+                spaceBetween: 30
             }
         }
     });
@@ -209,4 +213,13 @@ $(document).ready(function () {
         $('.advanced-search').toggleClass('d-none');
 
     });
+
+// FAQ
+    $('.faq__item_head').click(function () {
+        $(this).next().slideToggle(500);
+        if($(this).find('.faq__item_body').css('display')== 'none') {
+            $(this).find('.faq__item_body').css('display', 'block');
+        }
+    });
 });
+
