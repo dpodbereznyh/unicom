@@ -1,5 +1,5 @@
 .faq {
-  padding: 137px 0 64px;
+  padding: 137px 0 0;
   &__img {
     width: 442px;
     height: 249px;
@@ -113,6 +113,10 @@
     color: $akcentDark;
     display: none;
     margin-top: 32px;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto 64px;
   }
 }
 @include laptop {
