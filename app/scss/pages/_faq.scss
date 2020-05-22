@@ -84,6 +84,16 @@
     display: flex;
     flex-direction: column;
   }
+  &__item_question-active {
+    flex-direction: row;
+    align-items: center;
+    p {
+      @include blockText;
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
   &__item_number {
     @include blockText;
   }

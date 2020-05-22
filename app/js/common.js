@@ -222,11 +222,16 @@ $(document).ready(function () {
         }
     });
     $('.faq__item_head').click(function () {
+        if($('.faq__item_title_down').css('display')=='flex') {
+            $(this).find('.faq__item_title_down').hide();
+        } else {
+            $(this).find('.faq__item_title_down').css('display', 'flex');
+        }
+        $(this).find('.faq__item_question').toggleClass('faq__item_question-active');
         $(this).parent('.faq__item').toggleClass('faq__item-active');
     });
-    $('.faq__item_head').click(function () {
-        $(this).find('.faq__item_title_down').toggleClass('d-none');
-    });
+
+
 
 });
 
