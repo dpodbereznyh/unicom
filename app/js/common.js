@@ -215,13 +215,18 @@ $(document).ready(function () {
     });
 
 // FAQ
-
-    // $('.faq__item_head').click(function () {
-    //     $(this).next().slideToggle(500);
-    //     if($(this).find('.faq__item_body').css('display')== 'none') {
-    //         $(this).find('.faq__item_body').css('display', 'block');
-    //     }
-    // });
+    $('.faq__item_head').click(function () {
+        $(this).next().slideToggle(500);
+        if($(this).find('.faq__item_body').css('display')== 'none') {
+            $(this).find('.faq__item_body').css('display', 'block');
+        }
+    });
+    $('.faq__item_head').click(function () {
+        $(this).parent('.faq__item').toggleClass('faq__item-active');
+    });
+    $('.faq__item_head').click(function () {
+        $(this).find('.faq__item_title_down').toggleClass('d-none');
+    });
 
 });
 

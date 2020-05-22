@@ -69,6 +69,9 @@
     background: $akcent7;
     margin-bottom: 32px;
   }
+  &__item-active {
+    background: inherit;
+  }
   &__item_head {
     display: flex;
     align-items: center;
@@ -106,6 +109,27 @@
         color: $akcentDark;
         font-size: 13px;
       }
+    }
+  }
+  &__item_title_up {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    p {
+      margin-right: 45px;
+      @include blockText;
+      color: $akcentDark;
+      width: fit-content;
+      margin-left: auto;
+    }
+    > .icon-chevron-down {
+      &:before {
+        content: "\e900";
+        display: block;
+        color: $akcentDark;
+        font-size: 13px;
+      }
+
     }
   }
   &__item_body {
