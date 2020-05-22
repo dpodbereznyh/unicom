@@ -13,6 +13,16 @@
     0px 42px 0 0px $mainScheme2,
     -43px 42px 0 0px $mainScheme2;
   }
+  &-gray {
+    background: $akcent3;
+    box-shadow: -43px -42px 0 0px $akcent3,
+    0px -42px 0 0px $akcent3,
+    -43px 0px 0 0px $akcent3,
+    42px 0px 0 0px $akcent3,
+    43px 42px 0 0px $akcent3,
+    0px 42px 0 0px $akcent3,
+    -43px 42px 0 0px $akcent3;
+  }
   &-white {
     background: $neutral;
     box-shadow: -43px -42px 0 0px $neutral,
