@@ -216,22 +216,49 @@ $(document).ready(function () {
 
 // FAQ
     $('.faq__item_head').click(function () {
-        $(this).next().slideToggle(500);
+        $(this).next().slideToggle(300);
         if($(this).find('.faq__item_body').css('display')== 'none') {
             $(this).find('.faq__item_body').css('display', 'block');
         }
     });
     $('.faq__item_head').click(function () {
-        if($('.faq__item_title_down').css('display')=='flex') {
-            $(this).find('.faq__item_title_down').hide();
-        } else {
-            $(this).find('.faq__item_title_down').css('display', 'flex');
-        }
         $(this).find('.faq__item_question').toggleClass('faq__item_question-active');
         $(this).parent('.faq__item').toggleClass('faq__item-active');
     });
+    $('.faq__item_title_up').click(function () {
+        $(this).parent().slideToggle(300);
+        if($(this).find('.faq__item_body').css('display')== 'block') {
+            $(this).find('.faq__item_body').css('display', 'none');
+        }
+    });
+    $('.faq__item_title_up').click(function () {
+        $('.faq__item_question').removeClass('faq__item_question-active');
+        $('.faq__item').removeClass('faq__item-active');
+    });
 
-
+// Vacancy
+    $('.vacancy__item_head').click(function () {
+        $(this).next().slideToggle(300);
+        if($(this).find('.vacancy__item_body').css('display')== 'none') {
+            $(this).find('.vacancy__item_body').css('display', 'block');
+        }
+    });
+    $('.vacancy__item_head').click(function () {
+        $(this).parent('.vacancy__item').toggleClass('vacancy__item-active');
+        $(this).toggleClass('vacancy__item_head-active');
+        $(this).find('.vacancy__item_title').toggleClass('vacancy__item_title-active');
+    });
+    $('.vacancy__item_title_up').click(function () {
+        $(this).parent().slideToggle(300);
+        if($(this).find('.vacancy__item_body').css('display')== 'block') {
+            $(this).find('.vacancy__item_body').css('display', 'none');
+        }
+    });
+    $('.vacancy__item_title_up').click(function () {
+        $('.vacancy__item').removeClass('vacancy__item-active');
+        $('.vacancy__item_head').removeClass('vacancy__item_head-active');
+        $('.vacancy__item_title').removeClass('vacancy__item_title-active');
+    });
 
 });
 

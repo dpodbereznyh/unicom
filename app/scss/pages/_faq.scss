@@ -87,6 +87,9 @@
   &__item_question-active {
     flex-direction: row;
     align-items: center;
+    ~ .faq__item_title_down {
+      display: none;
+    }
     p {
       @include blockText;
       &:first-child {
