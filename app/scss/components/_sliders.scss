@@ -86,6 +86,9 @@
   font-size: 15px;
   line-height: 18px;
   color: $akcentDark;
+  max-height: 71px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .swiper-button-prev, .swiper-button-next {
   position: absolute;
@@ -107,6 +110,9 @@
 @include desktop {
   .news__slider_container {
     width: 85%;
+  }
+  .news__slide_desc {
+    max-height: 105px;
   }
 }
 @include laptop {
