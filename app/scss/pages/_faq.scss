@@ -68,9 +68,11 @@
     border: 3px solid $akcent7;
     background: $akcent7;
     margin-bottom: 32px;
+    transition: all 0.3s ease;
   }
   &__item-active {
     background: inherit;
+    transition: all 0.3s ease;
   }
   &__item_head {
     display: flex;
@@ -83,10 +85,12 @@
   &__item_question {
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease;
   }
   &__item_question-active {
     flex-direction: row;
     align-items: center;
+    transition: all 0.3s ease;
     ~ .faq__item_title_down {
       display: none;
     }
