@@ -16,7 +16,7 @@
 @mixin headMenu {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 20px;
   line-height: 23px;
 }
@@ -30,14 +30,14 @@
 @mixin subMenu {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 15px;
   line-height: 18px;
 }
 @mixin mainTitle {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 50px;
   line-height: 59px;
 }
@@ -58,7 +58,7 @@
 @mixin blockText {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 20px;
   line-height: 23px;
 }

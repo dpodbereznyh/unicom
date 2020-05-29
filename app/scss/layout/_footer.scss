@@ -1,11 +1,15 @@
 .footer {
   background: $akcentDark;
   padding: 38px 0 21px;
+  &__contacts_list_item {
+    margin-bottom: 8px;
+  }
   &__contacts_wrap {
     color: $neutral;
 
     &_item {
       margin: 0 0 28px;
+      @include footerMenu;
       a {
         @include footerMenu;
         color: $neutral;
@@ -27,9 +31,13 @@
     &_item {
       margin-bottom: 8px;
       transition: all 0.8s ease;
+      &_link {
+        margin-bottom: 10px;
+      }
       a {
         @include footerMenu;
         color: $neutral;
+        display: block;
         &:hover {
           color: $akcent1;
           transition: all 0.3s ease;
@@ -47,6 +55,7 @@
       transition: all 0.8s ease;
     }
     &_item {
+      margin-bottom: 5px;
       a {
         @include subMenu;
       }
