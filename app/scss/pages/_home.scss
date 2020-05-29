@@ -394,6 +394,14 @@
 }
 @include phones {
   .gallary__list_item-cover {
-    min-width: 212px;
+    width: 100%;
+  }
+  .gallary__list_item-subgallary {
+    width: 100%;
+  }
+  .subgallary__list_item {
+    width: 100%;
+    height: auto;
+    margin: 0 0 32px;
   }
 }
