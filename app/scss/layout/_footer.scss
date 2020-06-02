@@ -123,12 +123,16 @@
 .copyright {
   color: $neutral;
   font-family: "Georgia", sans-serif;
-  &__developer {
+  a {
+    color: $neutral;
+    font-family: "Georgia", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
     line-height: 18px;
     text-align: center;
+    display: block;
+    margin: 0 auto;
   }
   &__customer {
     font-style: normal;

@@ -158,6 +158,7 @@
   &__btn {
     display: block;
     margin: 0 auto 64px;
+    max-width: 244px;
   }
 }
 @include laptop {
