@@ -5,13 +5,14 @@
     text-align: center;
   }
   &__item {
+    border: 2px solid $neutral;
     margin-bottom: 32px;
-    transition: all 0.7s ease;
+    transition: all 0.3s ease;
   }
   &__item-active {
     border: 2px solid $logo1;
-    padding-bottom: 64px;
-    transition: all 0.7s ease;
+    //padding-bottom: 64px;
+    transition: all 0.3s ease;
   }
   &__item_head {
     background: $logo1;
@@ -19,10 +20,9 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    transition: all 0.7s ease;
+    transition: all 0.3s ease;
   }
   &__item_head-active {
-    padding: 64px 64px 0;
     background: none;
     transition: all 0.3s ease;
   }
@@ -36,7 +36,6 @@
   }
   &__item_title-active {
     color: $logo2;
-    margin-bottom: 32px;
     transition: all 0.3s ease;
   }
   &__item_title_down {
