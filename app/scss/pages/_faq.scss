@@ -154,7 +154,7 @@
   &__item_body {
     @include secondaryTitle;
     color: $akcentDark;
-    display: block;
+    display: none;
     margin-top: 32px;
   }
   &__btn {
