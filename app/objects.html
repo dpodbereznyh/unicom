@@ -439,16 +439,15 @@
                     <p class="form__description">
                         Оставьте заявку<br>и мы перезвоним Вам в течение часа
                     </p>
-                    <form id="form" class="form" onsubmit="send(event, 'send.php')">
+                    <div class="msg" onclick="gsapMsg.reverse()">Сообщение</div>
+                    <form id="form" method="post" class="form" onsubmit="send(event, 'send.php')">
                         <div class="controls">
-                            <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input">
-                            <span class="error_name"></span>
+                            <input type="text" name="name" placeholder="Ваше имя" class="form__input aInput">
                         </div>
                         <div class="controls">
-                            <input type="tel" name="phone" value="" placeholder="Номер телефона" class="form__input">
-                            <span class="error_phone"></span>
+                            <input name="email" id="email" placeholder="Номер телефона" class="form__input aInput">
                         </div>
-                        <button type="submit" class="form__btn btn">
+                        <button type="submit" class="form__btn btn button">
                             Отправить
                         </button>
                     </form>
@@ -945,9 +944,5 @@
 </footer>
 
 <script src="js/scripts.min.js"></script>
-
-
-
-
 </body>
 </html>

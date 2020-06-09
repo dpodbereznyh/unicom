@@ -230,8 +230,11 @@
   }
 }
 @include laptop {
+  .about {
+    margin-bottom: 64px;
+  }
   .video {
-    padding: 0 0 64px;
+    padding: 0;
   }
   .section__video_icon {
     width: 79px;
