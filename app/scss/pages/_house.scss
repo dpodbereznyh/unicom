@@ -11,9 +11,9 @@
     display: block;
     img {
       max-width: 100%;
-      display: block;
+      display: inline-block;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
   }
   &__specification {
@@ -98,13 +98,13 @@
   &_item {
     position: relative;
     cursor: pointer;
-    height: 327px;
+    height: auto;
     margin-bottom: 32px;
     img {
       max-width: 100%;
-      width: 100%;
-      height: 100%;
       display: inline-block;
+      width: 100%;
+      height: auto;
     }
     &-layout {
       background: rgba(42, 42, 42, 0.5);
@@ -147,9 +147,6 @@
   }
 }
 @include tablet {
-  .house__gallery_item {
-    height: 190px;
-  }
   .house__gallery_btn {
     width: 167px;
     height: 56px;
@@ -159,8 +156,6 @@
 }
 @include phones {
   .house__gallery_item {
-    height: 190px;
-    max-width: 290px;
     margin: 0 auto 25px;
   }
   .house__gallery_btn {
