@@ -4,10 +4,11 @@
   max-width: 1252px;
   max-height: 750px;
   width: 90%;
-  position: absolute;
-  left: 50%;
-  top: 35px;
-  transform: translatex(-50%);
+  overflow: hidden;
+  // position: absolute;
+  // left: 50%;
+  // top: 35px;
+  // transform: translatex(-50%);
   &__overlay {
     position: fixed;
     display: none;

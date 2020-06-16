@@ -338,3 +338,75 @@ function showMsg(message, color) {
     gsapMsg.restart();
 }
 
+
+
+var apiTools = {};
+apiTools.Cookie = {
+	getCookie: function(name) {
+        var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    },
+    setCookie: function(key, value, expires) {
+        document.cookie = key + "=" + value + "; path=/; expires=" + expires.toUTCString();
+    }
+};
+
+/*
+	Usage:
+	
+	add 'js-getFlatPlan' class;
+	add "data-flat-id" attribute with value of backend resource ID.
+*/
+$(function() {
+	$( document ).on('click', '.js-getFlatPlan', function( event ) {
+
+        if ( this.tagName == 'A' ) {
+            event.preventDefault();
+        }
+
+		if ( apiMediaCfg !== undefined ) {
+
+			var id = this.dataset.flatId;
+			if ( !id ) { return; }
+
+			var data = {
+				action: 'get/flatPlan',
+				id: id
+			};
+
+			$.post({
+				url: apiMediaCfg.actionUrl,
+				data: data,
+				cache: false,
+				dataType: 'json',
+				headers: {
+					'XSRF-TOKEN': apiTools.Cookie.getCookie('XSRF-TOKEN')
+				},
+				success: function ( response ) {
+					console.log( response );
+
+					if ( response.data !== undefined && response.success ) {
+
+						var data = response.data;
+
+						if ( data.html ) {
+
+							$.fancybox.open({
+								'type': 'html',
+								'src': data.html,
+								'hash': 'flatPlan'
+							});
+													
+						}
+
+					}
+				},
+				error: function ( jqXHR, textStatus, errorThrown ) {
+					console.log( jqXHR );
+				}
+			})
+		}
+
+	})
+});
