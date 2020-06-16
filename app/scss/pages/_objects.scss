@@ -435,6 +435,7 @@
     @include secondaryTitle;
   }
   &__list {
+    margin-bottom: 0;
   }
   &__item {
     display: flex;
@@ -534,6 +535,9 @@
       line-height: 18px;
       padding: 0 16px;
     }
+  }
+  &__pagination {
+    margin-bottom: 64px;
   }
 }
 @include desktop {

@@ -1,0 +1,167 @@
+$pagination__spacer: 1rem 0;
+/* BORDER */
+$pagination__item-border-width: 1px;
+$pagination__item-border-style: solid;
+$pagination__item-border-color: $akcent7;
+$pagination__item-hover-border-color: $logo2;
+/* BORDER END */
+/* ARROWS CUSTOM STYLE */
+$pagination__item-arrow-background-color: transparent;
+$pagination__item-arrow-color: $akcent7;
+$pagination__item-arrow-hover-background-color: transparent;
+$pagination__item-arrow-hover-color: $logo2;
+/* ARROWS CUSTOM STYLE END */
+$pagination__item-size: 40px;
+$pagination__item-line-height: 38px;
+$pagination__item-spacer: 4px;
+$pagination__item-font-size: 16px;
+$pagination__item-font-weight: 500;
+$pagination__item-transition: all .25s ease-out 0s;
+$pagination__item-border-radius: 2px;
+$pagination__item-background-color: #ffffff;
+$pagination__item-color: $akcentDark;
+$pagination__item-active-background-color: $logo2;
+$pagination__item-active-color: #ffffff;
+$pagination__item-disabled-color: #999999;
+$pagination__item-disabled-background-color: #EBEBE4;
+$pagination__mobile-item-size: 30px;
+$pagination__mobile-item-font-size: 14px;
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		user-select: none;
+		margin: 0 $pagination__item-spacer;
+		min-width: $pagination__item-size;
+		line-height: $pagination__item-line-height;
+		background-color: $pagination__item-background-color;
+		color: $pagination__item-color;
+		font-size: $pagination__item-font-size;
+		border-radius: $pagination__item-border-radius;
+		transition: $pagination__item-transition;
+        font-weight: $pagination__item-font-weight;
+        padding: {
+            left: 6px;
+            right: 6px;
+        }
+		margin-top: 0;
+		text-align: center;
+		&_state_current,
+		&:hover {
+			text-decoration: none;
+			color: $pagination__item-active-color;
+			background-color: $pagination__item-active-background-color;
+		}
+		&_state_current {
+			cursor: default;
+		}
+		&_state_disabled {
+			cursor: default;
+			color: $pagination__item-disabled-color;
+			background-color: $pagination__item-disabled-background-color;
+			&:hover {
+				color: $pagination__item-disabled-color;
+				background-color: $pagination__item-disabled-background-color;
+			}
+		}
+		&:before {
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			display: inline-block;
+			font-family: 'api-icons' !important;
+		}
+		&_type_previous {
+			&:before {
+				content: '\e909';
+			}
+		}
+		&_type_next {
+			&:before {
+				content: '\e904';
+			}
+		}
+		&_type_first {
+			&:before {
+				content: '\e91a';
+			}
+		}
+		&_type_last {
+			&:before {
+				content: '\e919';
+			}
+		}
+	}
+}
+
+/* border */
+.pagination__item {
+	border-width: $pagination__item-border-width;
+	border-style: $pagination__item-border-style;
+	border-color: $pagination__item-border-color;
+	&_state_current,
+	&:hover {
+		border-color: $pagination__item-hover-border-color;
+	}
+	&_type_previous,
+	&_type_next,
+	&_type_first,
+	&_type_last {
+		border: none;
+	}
+}
+/* border end END */
+
+/* arrow no bg */
+.pagination__item {
+	&_type_previous,
+	&_type_next,
+	&_type_first,
+	&_type_last {
+		border: none;
+		color: $pagination__item-arrow-color;
+		background: $pagination__item-arrow-background-color;
+		&:hover {
+			background: $pagination__item-arrow-hover-background-color;
+			color: $pagination__item-arrow-hover-color;
+		}
+		&.pagination__item_state_disabled {
+			&,
+			&:hover {
+				color: $pagination__item-disabled-color;
+			}
+		}
+	}
+}
+/* arrow no bg END */
+
+@include media-breakpoint-down(sm) {
+	.pagination {
+		&__item {
+			min-width: $pagination__mobile-item-size;
+			line-height: $pagination__mobile-item-size;
+			font-size: $pagination__mobile-item-font-size;
+		}
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.pagination {
+		&__item {
+			min-width: 25px;
+			line-height: 25px;
+		}
+	}
+}
