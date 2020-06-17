@@ -193,7 +193,6 @@
 }
 
 //Excursion
-
 .excursion {
   background: $logo1;
   color: $neutral;
@@ -210,6 +209,33 @@
   }
   &__form {
     margin: 0 0 43px;
+    &_select {
+      select {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #C5C6BC;
+        option:first-child {
+          color: #C5C6BC;
+        }
+        option {
+          color: #000;
+        }
+      }
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        background: url("../img/forms/select-arrow.svg")no-repeat center center/cover;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-25px, -50%);
+      }
+    }
   }
   &__img_wrap {
     position: relative;
