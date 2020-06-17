@@ -22,7 +22,7 @@
       }
       &_img {
         order: 2;
-        width: 285px;
+        max-width: 285px;
         height: 285px;
         border-radius: 15px;
         img {
@@ -240,7 +240,7 @@
   }
   .infrastructure__list_item-third {
     margin: 0 auto 90px;
-    width: 769px;
+    width: 100%;
   }
   .infrastructure__list_item_text-third {
     margin: 0 0 0 32px;
@@ -288,7 +288,7 @@
     border-radius: 45px 0px;
   }
 }
-@include tablet {
+@include phones {
   .infrastructure__list {
     align-items: center;
   }
