@@ -410,3 +410,20 @@ $(function() {
 
 	})
 });
+
+$(function() {
+    $(document).on('change', '.js-choiceFlatBlockControl', function() {
+        var radios = $('.js-choiceFlatBlockControl');
+        var index = 0;
+        
+        for (var i = 0, length = radios.length; i < length; i++) {
+          if (radios[i].checked) {
+            var index = radios[i].value;
+            break;
+          }
+        }
+        
+        $('.js-choiceFlatBlock').hide();
+        $('.js-choiceFlatBlock[data-index=' + index + ']').show();
+    });
+});
