@@ -39,6 +39,12 @@
         font-weight: bold;
         color: $neutral;
       }
+      ul {
+        li {
+          font-weight: bold;
+          color: $neutral;
+        }
+      }
     }
   }
   &__text {
@@ -56,9 +62,7 @@
   }
 }
 @include laptop {
-  .general-view__slider_container {
-    height: 240px;
-  }
+
 
   .general-view__specification_item {
     font-size: 16px;
@@ -71,9 +75,6 @@
   .general-view__specification_title {
     font-size: 20px;
     margin-bottom: 20px;
-  }
-  .general-view__slider_container {
-    height: 200px;
   }
 }
 @include phones {
@@ -97,7 +98,6 @@
 .house__gallery {
   &_item {
     position: relative;
-    cursor: pointer;
     height: auto;
     margin-bottom: 32px;
     img {
@@ -136,6 +136,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Roboto;
+    background: $logo2;
+    box-shadow: 0px 10px 25px rgba(18, 133, 196, 0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+    color: $neutral;
   }
 }
 @include laptop {
@@ -213,15 +219,20 @@
 
 //Documents
 .documents {
-  padding: 64px 0;
+  padding: 64px 0 32px;
+  &__list {
+    max-width: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
   &__item {
     width: fit-content;
-    &-first {
-      margin-left: auto;
-    }
-    &-second {
-      margin: 0 auto;
-    }
+    margin: 0 5px 32px 5px;
+    width: 25%;
+    min-width: 202px;
   }
   &__item_icon {
     display: block;
@@ -232,6 +243,10 @@
     color: $akcentDark;
     text-align: center;
     margin-bottom: 32px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__item_btn {
     width: 202px;
@@ -240,16 +255,17 @@
   }
 }
 @include laptop {
-  .documents__item {
-    margin: 0 auto;
-  }
+
 }
 @include tablet {
-  .documents__item {
-    margin: 0 auto 32px;
-  }
+
   .documents {
     padding: 64px 0 32px;
+  }
+}
+@include phones {
+  .documents__list {
+    justify-content: space-around;
   }
 }
 
@@ -269,6 +285,7 @@
   }
   &__list {
     display: flex;
+    flex-wrap: wrap;
   }
   &__item {
     margin-right: 16px;
@@ -370,10 +387,11 @@
   }
   &_list {
     display: flex;
+    width: 80%;
   }
   &_item {
     padding: 13px 27px 29px;
-    width: 265px;
+    width: 25%;
     height: 190px;
     border-left: 1px solid $akcentDark;
     display: flex;
@@ -411,6 +429,7 @@
   }
   .flat__result_list {
     border-top: 1px solid $akcentDark;
+    width: 100%;
   }
   .flat__result_item {
     &:first-child {
@@ -424,18 +443,25 @@
     width: 25%;
   }
 }
+@media screen and (max-width: 1050px ) {
+  .select-flat__circle-orange {
+    display: none;
+  }
+}
 @include tablet {
-  .select-porch__title {
-    margin-right: unset;
+  .select-flat {
+    max-width: 540px;
+    margin: 0 auto;
   }
   .select-porch {
     justify-content: space-between;
   }
-  .select-porch__list {
-    justify-content: space-around;
-  }
   .select-porch__item {
     margin-right: 0;
+  }
+  .flat__result_wrap {
+    max-width: 530px;
+    margin: 0 auto;
   }
   .flat__status_list {
     justify-content: space-around;
@@ -467,16 +493,12 @@
   }
 }
 @include phones {
-  .select-porch {
-    flex-direction: column;
-  }
   .select-porch__title {
-    width: auto;
     text-align: center;
     margin-bottom: 32px;
+    margin-right: 55px;
   }
   .select-porch__list {
-    flex-direction: column;
     align-items: center;
   }
   .select-porch__item {
@@ -493,11 +515,23 @@
     margin-right: 16px;
   }
   .flat__result_item {
-    width: 100%;
-  }
-  .flat__result_item {
     &:nth-child(odd) {
       border-right: none;
     }
+  }
+  .flat__result_item_head {
+    font-size: 20px;
+  }
+  .flat__result_item_body {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .flat__result_item_link {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .flat__result_item {
+    height: auto;
+    padding: 15px 25px;
   }
 }

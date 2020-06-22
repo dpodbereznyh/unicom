@@ -134,7 +134,6 @@
 .general-view__slider {
   &_container {
     width: 100%;
-    height: 334px;
     position: relative;
     margin-bottom: 16px;
     .swiper-pagination-bullet {
@@ -163,20 +162,199 @@
     position: absolute;
     top: 50%;
     z-index: 1;
-    transform: translate(-150%,-50%);
-    left: 100%;
+    transform: translate(50%,-50%);
+    left: 0;
   }
   &_button-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    right: 0;
+  }
+}
+.general-view__thumbs_slide {
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+}
+@include tablet {
+  .general-view__slider_button-prev,
+  .general-view__slider_button-next {
+    width: 30px;
+    height: 30px;
+  }
+}.general-view__slider {
+  &_container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+    .swiper-pagination-bullet {
+      background: $neutral;
+      &-active {
+        background: $logo2;
+      }
+    }
+  }
+  &_link {
+    img {
+      max-width: 100%;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &_pagination-bullets {
+    bottom: 25px;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%);
+  }
+  &_button-prev {
     position: absolute;
     top: 50%;
     z-index: 1;
     transform: translate(50%,-50%);
     left: 0;
   }
+  &_button-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    right: 0;
+  }
+}
+.general-view__thumbs_slide {
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
 }
 @include tablet {
   .general-view__slider_button-prev,
   .general-view__slider_button-next {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+//Unfinished House
+.unfinished-house__slider {
+  &_container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+    .swiper-pagination-bullet {
+      background: $neutral;
+      &-active {
+        background: $logo2;
+      }
+    }
+  }
+  &_link {
+    img {
+      max-width: 100%;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &_pagination-bullets {
+    bottom: 25px;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%);
+  }
+  &_button-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translate(50%,-50%);
+    left: 0;
+  }
+  &_button-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    right: 0;
+  }
+}
+.unfinished-house__thumbs_slide {
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+}
+@include tablet {
+  .unfinished-house__slider_button-prev,
+  .unfinished-house__slider_button-next {
+    width: 30px;
+    height: 30px;
+  }
+}.unfinished-house__slider {
+   &_container {
+     width: 100%;
+     position: relative;
+     margin-bottom: 16px;
+     .swiper-pagination-bullet {
+       background: $neutral;
+       &-active {
+         background: $logo2;
+       }
+     }
+   }
+   &_link {
+     img {
+       max-width: 100%;
+       display: inline-block;
+       width: 100%;
+       height: auto;
+     }
+   }
+   &_pagination-bullets {
+     bottom: 25px;
+     left: 50%;
+     position: absolute;
+     z-index: 2;
+     transform: translate(-50%);
+   }
+   &_button-prev {
+     position: absolute;
+     top: 50%;
+     z-index: 1;
+     transform: translate(50%,-50%);
+     left: 0;
+   }
+   &_button-next {
+     position: absolute;
+     top: 50%;
+     z-index: 1;
+     transform: translate(-50%,-50%);
+     right: 0;
+   }
+ }
+.unfinished-house__thumbs_slide {
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+}
+@include tablet {
+  .unfinished-house__slider_button-prev,
+  .unfinished-house__slider_button-next {
     width: 30px;
     height: 30px;
   }
@@ -242,7 +420,7 @@
   position: relative;
   margin-bottom: 64px;
   &_container {
-    max-height: 620px;
+    //max-height: 620px;
     max-width: 1284px;
   }
   &_wrapper {
@@ -252,7 +430,7 @@
     display: inline-block;
     width: 100%;
     height: auto;
-    max-height: 620px;
+    //max-height: 620px;
     img {
       max-width: 100%;
       display: inline-block;

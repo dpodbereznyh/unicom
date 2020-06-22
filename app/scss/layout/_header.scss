@@ -97,24 +97,42 @@
   }
 }
 @include tablet {
+  .header {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .header__top_nav {
+    margin-bottom: 16px;
+  }
   .header__bottom_nav-btn {
     display: block;
   }
+ .header__logo {
+   margin: 0 auto 32px;
+   justify-content: center;
+ }
+  .header__phone {
+    padding: 0 0 0 0;
+  }
+  .header__phone_wrap {
+    flex-direction: row;
+  }
+  .main-menu-btn {
+    margin: 11px 10px 11px 0;
+  }
 }
 @include phones {
-  .header__logo {
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 30px;
-    justify-content: center;
-  }
-  .header__logo_text {
-    font-size: 14px;
-  }
-  .header__phone {
-    padding: 0 0 10px;
-  }
   .header__btn {
     margin: 20px auto 0;
+  }
+}
+@media screen and (max-width: 360px ) {
+  .header__phone_text a {
+    font-size: 13px;
+  }
+  .header__phone_icon {
+    width: 13px;
+    height: auto;
+    margin-right: 9px;
   }
 }

@@ -89,12 +89,25 @@ $(document).ready(function () {
             }
         }
     });
-
+//General View Swiper Thumbs
+    var GeneralViewThumbs = new Swiper ('.general-view__thumbs_container', {
+        slideClass: 'general-view__thumbs_slide',
+        wrapperClass: 'general-view__thumbs_wrapper',
+        slidesPerView: 3,
+        spaceBetween: 5,
+        lazy: {
+            loadPrevNext: true,
+        },
+    });
 //General View Swiper Slider
     var GeneralViewSlider = new Swiper ('.general-view__slider_container', {
         slideClass: 'general-view__slider_slide',
         wrapperClass: 'general-view__slider_wrapper',
         slidesPerView: 1,
+        autoHeight: true,
+        thumbs: {
+            swiper: GeneralViewThumbs,
+        },
         lazy: {
             loadPrevNext: true,
         },
@@ -114,6 +127,32 @@ $(document).ready(function () {
             }
         }
     });
+//General View Swiper Slider
+    var unfinishedHouseSlider = new Swiper ('.unfinished-house__slider_container', {
+        slideClass: 'unfinished-house__slider_slide',
+        wrapperClass: 'unfinished-house__slider_wrapper',
+        slidesPerView: 1,
+        autoHeight: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.unfinished-house__slider_button-next',
+            prevEl: '.unfinished-house__slider_button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
+    });
+
 //Progress Build Slider
     var progressBuildSlider = new Swiper ('.progress-build__slider_container', {
         slideClass: 'progress-build__slider_slide',
@@ -151,6 +190,7 @@ $(document).ready(function () {
         slideClass: 'standard-design__slider_slide',
         wrapperClass: 'standard-design__slider_wrapper',
         slidesPerView: 1,
+        autoHeight: true,
         lazy: {
             loadPrevNext: true,
         },
@@ -260,6 +300,11 @@ $(document).ready(function () {
         $('.vacancy__item_title').removeClass('vacancy__item_title-active');
     });
 
+    $('[data-fancybox="gallery"]').fancybox({
+        thumbs : {
+            autoStart : true
+        }
+    });
 
 });
 
@@ -409,4 +454,20 @@ $(function() {
 		}
 
 	})
+});
+$(function() {
+    $(document).on('change', '.js-choiceFlatBlockControl', function() {
+        var radios = $('.js-choiceFlatBlockControl');
+        var index = 0;
+
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                var index = radios[i].value;
+                break;
+            }
+        }
+
+        $('.js-choiceFlatBlock').hide();
+        $('.js-choiceFlatBlock[data-index=' + index + ']').show();
+    });
 });
