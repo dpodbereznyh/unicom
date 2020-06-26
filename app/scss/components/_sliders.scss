@@ -78,6 +78,7 @@
   line-height: 23px;
   color: $akcentDark;
   margin-bottom: 12px;
+  text-align: center;
 }
 .news__slide_desc {
   font-family: "Roboto", sans-serif;
@@ -121,7 +122,7 @@
   }
 }
 
-//House General View
+
 .news {
   padding-bottom: 62px;
 }
@@ -131,6 +132,9 @@
   margin: 0 auto;
   padding: 12px 12px;
 }
+
+//House General View
+
 .general-view__slider {
   &_container {
     width: 100%;
@@ -250,7 +254,6 @@
   &_container {
     width: 100%;
     position: relative;
-    margin-bottom: 16px;
     .swiper-pagination-bullet {
       background: $neutral;
       &-active {
@@ -306,7 +309,6 @@
    &_container {
      width: 100%;
      position: relative;
-     margin-bottom: 16px;
      .swiper-pagination-bullet {
        background: $neutral;
        &-active {
@@ -386,6 +388,7 @@
       width: 100%;
       height: auto;
       margin-bottom: 32px;
+      border-radius: 15px;
     }
   }
 }

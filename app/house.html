@@ -195,13 +195,13 @@
                                 <p>
                                     Материал постройки
                                 </p>
-<li>                                - устройство полов из ламината (жилые комнаты) и керамическая плитка в сан. узле;</li>
-                                - устройство натяжных потолков;
-                                - установка сантехники;
-                                - виниловые обои;
-                                - установка входной и межкомнатных дверей;
-                                - остекление лоджий.
-                            </li>
+                       <li>СТЯЖКА,</li>
+                                <li>ШТУКАТУРКА,</li>
+                                <li>ЭЛЕКТРОРАЗВОДКА,</li>
+<li>                            СТОЯКИ ОТОПЛЕНИЯ И КАНАЛИЗАЦИИ, </li>
+                                <li>БАТАРЕИ,</li> 
+                                <li>КОТЕЛ,</li> 
+<li>                                ОСТЕКЛЕНИЕ ОКОН И ЛОДЖИЙ.</li>
                             <li class="general-view__specification_item">
                                 <p>
                                     Этажность здания
@@ -696,7 +696,7 @@
                     <form action="#" class="form excursion__form">
                         <div class="controls">
                             <div class="excursion__form_select">
-                                <select name="" id="" class="form__input">
+                                <select name="object" id="" class="form__input">
                                     <option value="" selected>Выберите объект</option>
                                     <option value="объект1">объект1</option>
                                     <option value="объект1">объект2</option>
@@ -704,15 +704,15 @@
                             </div>
                         </div>
                         <div class="controls">
-                            <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input">
+                            <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input eInput">
                             <span class="error_name"></span>
                         </div>
                         <div class="controls">
-                            <input type="tel" name="phone" value="" placeholder="Номер телефона" class="form__input">
+                            <input type="tel" name="phone" value="" placeholder="Номер телефона" class="form__input eInput">
                             <span class="error_phone"></span>
                         </div>
                         <div class="controls">
-                            <input type="tel" name="date" value="" placeholder="Дата" class="form__input">
+                            <input type="text" name="date" value="" placeholder="Дата" class="form__input eInput">
                             <span class="error_phone"></span>
                         </div>
                         <button type="submit" class="form__btn btn excursion__btn">
@@ -780,13 +780,13 @@
                     <p class="form__description">
                         Оставьте заявку<br>и мы перезвоним Вам в течение часа
                     </p>
-                    <form action="#" class="form">
+                    <form action="#" class="form" method="post" onsubmit="send(event, 'send.php')">
                         <div class="controls">
-                            <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input">
+                            <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input aInput">
                             <span class="error_name"></span>
                         </div>
                         <div class="controls">
-                            <input type="tel" name="phone" value="" placeholder="Номер телефона" class="form__input">
+                            <input type="tel" name="phone" value="" placeholder="Номер телефона" class="form__input aInput">
                             <span class="error_phone"></span>
                         </div>
                         <button type="submit" class="form__btn btn">
@@ -893,21 +893,42 @@
                         <li>Этаж 2</li>
                     </ul>
                     <div class="popup-result__buttons">
-                        <a href="#" class="btn">
+                        <button id="jsBtn" href="#" class="btn  popup-feedback_btn" data-input="yeyeyeye">
                             задать вопрос
-                        </a>
+                        </button>
                         <a href="#" class="btn">
                             рассчитать ипотеку
                         </a>
-                        <a href="#" class="btn">
+                        <button href="#" class="btn popup-feedback_btn">
                             записаться на просмотр
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
+<div  class="popup-feedback" id="popup-feedback">
+    <div class="popup-feedback__close">+</div>
+    <div class="msg" onclick="gsapMsg.reverse()">Сообщение</div>
+    <form method="post" class="form popup-form" onsubmit="send(event, 'send.php')">
+        <input id="jsTitle" type="hidden" name="title" required="">
+        <div class="controls">
+            <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input aInput">
+            <span class="error_name"></span>
+        </div>
+        <div class="controls">
+            <input type="tel" name="phone" value="" placeholder="Номер телефона*" required class="form__input aInput">
+            <span class="error_phone"></span>
+        </div>
+        <div class="controls">
+            <textarea type="text" name="comment" placeholder="Ваше сообщение" class="form__textarea aInput"></textarea>
+        </div>
+        <button type="submit" class="form__btn btn excursion__btn">
+            Отправить
+        </button>
+    </form>
+</div>
 <footer class="footer" id="footer">
     <div class="container-fluid">
         <div class="row">
@@ -1123,8 +1144,9 @@
 </footer>
 
 
-<script src="js/scripts.min.js"></script>
 
+
+<script src="js/scripts.min.js"></script>
 
 
 

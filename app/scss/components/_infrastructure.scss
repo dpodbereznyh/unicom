@@ -241,7 +241,7 @@
   }
   .infrastructure__list_item-third {
     margin: 0 auto 90px;
-    width: 100%;
+    width: 100%!important;
   }
   .infrastructure__list_item_text-third {
     margin: 0 0 0 32px;
@@ -289,43 +289,152 @@
     border-radius: 45px 0px;
   }
 }
-@include phones {
-  .infrastructure__list {
-    align-items: center;
-  }
-  .infrastructure__list_item_wrap-first, .infrastructure__list_item_wrap-second {
-    flex-direction: column;
+
+@media screen and (max-width: 636px ) {
+  .infrastructure__list_item_wrap {
+    display: flex;
+    justify-content: space-between;
   }
   .infrastructure__list_item_wrap-first {
-    margin: 0 0 33px;
-  }
-  .infrastructure__list_item-second {
-    margin-bottom: 135px;
-  }
-  .infrastructure__list_item-third {
-    margin: 0 auto 122px;
-    width: auto;
-    flex-direction: column;
-    align-items: flex-start;
+    margin: 0 0 89px;
   }
   .rectangle-item-third {
-    display: none;
-  }
-  .infrastructure__list_item_text-third {
-    margin: 16px 0 0 0;
+    position: static;
+    order: 3;
   }
   .circle-item-third {
-    transform: translate(-43px,-65px);
-    top: 100%;
-    right: 0;
+    position: static;
+    margin: 0;
+  }
+  .infrastructure__list_item {
+    width: 220px;
+  }
+  .infrastructure__list_item_img-third {
+    width: 220px;
+    order: 0;
+  }
+  .infrastructure__list_item_img {
+    height: auto;
+  }
+  .infrastructure__list_item_title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .infrastructure__list_item_desc {
+    font-size: 18px;
+  }
+  .circle-item-second {
+    box-shadow: -26px -26px 0 0 #c05048, 0 -26px 0 0 #c05048, -26px 0 0 0 #c05048, 26px 0 0 0 #c05048, 26px 26px 0 0 #c05048, 0 26px 0 0 #c05048, -26px 26px 0 0 #c05048;
+    transform: translate(-38px, -46px);
+    width: 8px;
+    height: 8px;
+  }
+  .disk-item-first {
+    width: 55px;
+    height: 55px;
+    transform: translate(-56px, 263px);
+  }
+  .rectangle-item-second {
+    width: 55px;
+    left: 43px;
+    top: 289px;
+    height: 139px;
+    border-radius: 0 34px;
+  }
+  .infrastructure__list_item-third {
+    height: fit-content;
+    margin: 0 auto 51px;
+  }
+  .circle-item-third {
+    box-shadow: -26px -26px 0 0 #ff9f4a, 0 -26px 0 0 #ff9f4a, -26px 0 0 0 #ff9f4a, 26px 0 0 0 #ff9f4a, 26px 26px 0 0 #ff9f4a, 0 26px 0 0 #ff9f4a, -26px 26px 0 0 #ff9f4a;
+    width: 8px;
+    height: 8px;
+    transform: translate(52px,-188px);
+  }
+  .rectangle-item-third {
+    width: 53px;
+    height: 220px;
+    margin-left: auto;
+  }
+  .infrastructure__list_item_text-third {
+    margin: 0 0 0 16px;
+  }
+  .infrastructure__list_item_text-third {
+    width: 144px;
   }
   .rectangle-blue-item-third {
-    width: 65px;
-    height: 250px;
-    left: 86px;
-    top: 357px;
+    width: 55px;
+    height: 240px;
+    left: 131px;
+    top: 154px;
   }
-  .infrastructure__list_item-fourth {
-    margin-bottom: 32px;
+  .circle-item-fourth {
+    box-shadow: -26px -26px 0 0 #8fc3df, 0 -26px 0 0 #8fc3df, -26px 0 0 0 #8fc3df, 26px 0 0 0 #8fc3df, 26px 26px 0 0 #8fc3df, 0 26px 0 0 #8fc3df, -26px 26px 0 0 #8fc3df;
+    width: 8px;
+    height: 8px;
+    left: 184px;
+    top: 273px;
+  }
+  .infrastructure__list_item_text-fifth {
+    margin: 16px 0 0 0;
+  }
+  .rectangle-item-fifth {
+    width: 95px;
+    height: 95px;
+    right: 124px;
+    top: 244px;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px ) {
+  .infrastructure__list_item {
+    width: 48%;
+  }
+  .infrastructure__list_item_title {
+    line-height: 24px;
+  }
+  .infrastructure__list_item_desc {
+    font-size: 16px;
+  }
+  .infrastructure__list_item_wrap-first {
+    align-items: baseline;
+  }
+  .circle-item-second, .rectangle-item-third {
+    display: none;
+  }
+  .infrastructure__list_item_text-second {
+    width: auto;
+  }
+  .rectangle-item-second {
+    top: 91%;
+  }
+  .disk-item-first {
+    transform: translate(-56px, 224px);
+  }
+  .circle-item-third {
+    width: 6px;
+    height: 6px;
+    transform: translate(52px, -164px);
+  }
+  .infrastructure__list_item_wrap-first {
+    margin: 0 0 58px;
+  }
+  .rectangle-blue-item-third {
+    width: 55px;
+    height: 220px;
+    left: 134px;
+    top: 73%;
+  }
+  .rectangle-item-fifth {
+    display: none;
+  }
+  .circle-item-fourth {
+    left: 110%;
+    top: 74%;
   }
 }
