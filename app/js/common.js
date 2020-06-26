@@ -308,39 +308,26 @@ $(document).ready(function () {
 
 });
 
-
+$(document).on( "click", ".jsBtn", function() {
+    var newinput = this.getAttribute('data-input');
+    var newtitle = this.getAttribute('data-title');
+    jsInput.setAttribute('value', newinput);
+    jsTitle.setAttribute('value', newtitle);
+});
 
 // Объявления
 var msg = document.querySelector(".msg");
 var gsapMsg = gsap.to(".msg", 0.25, {autoAlpha: 1,y: -40,ease: Expo.inOut, paused: true});
 var arrInput = document.querySelectorAll('.aInput');
 
-function ValidMail() {
-    var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
-    var myMail = document.getElementById('email').value;
-    var valid = re.test(myMail);
-    if (valid) output = 'Адрес эл. почты введен правильно!';
-    else output = 'Адрес электронной почты введен неправильно!';
-    document.getElementById('message').innerHTML = output;
-    return valid;
-}
 
-function ValidPhone() {
-    var re = /^\d[\d\(\)\ -]{4,14}\d$/;
-    var myPhone = document.getElementById('phone').value;
-    var valid = re.test(myPhone);
-    if (valid) output = 'Номер телефона введен правильно!';
-    else output = 'Номер телефона введен неправильно!';
-    document.getElementById('message').innerHTML = document.getElementById('message').innerHTML+'<br />'+output;
-    return valid;
-}
 // Функция отправки сообщения
 function send(event, php){
     event.preventDefault ? event.preventDefault() : event.returnValue = false;
-    ValidPhone();
-    ValidMail();
+
     for (var i = 0,count=arrInput.length; i<count; i++)
-    {arrInput[i].classList.remove("errorInput");}
+    {arrInput[i].classList.remove("errorInput");
+    }
     event.target.querySelector("button").disabled = true;
     showMsg("Подождите. Идёт отправка сообщения", "#b1b1b1");
     var req = new XMLHttpRequest();
@@ -378,12 +365,15 @@ function send(event, php){
 
 // Функция появления статуса отправки сообщения
 function showMsg(message, color) {
+
     msg.innerText = message;
     msg.style.background = color;
     gsapMsg.restart();
 }
 
-
+$(document).on( "click", ".msg", function() {
+    msg.style.display = 'none';
+});
 
 var apiTools = {};
 apiTools.Cookie = {
@@ -399,7 +389,7 @@ apiTools.Cookie = {
 
 /*
 	Usage:
-	
+
 	add 'js-getFlatPlan' class;
 	add "data-flat-id" attribute with value of backend resource ID.
 */
@@ -442,7 +432,7 @@ $(function() {
 								'src': data.html,
 								'hash': 'flatPlan'
 							});
-													
+
 						}
 
 					}
