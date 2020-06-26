@@ -3,57 +3,57 @@
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
-
-// Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-
-
-// Формирование самого письма
-$title = "Проверка связи";
-$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-";
-
+    
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-//    $mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.bk.ru'; // SMTP сервера вашей почты
-    $mail->Username   = '962289@bk.ru'; // Логин на почте
-    $mail->Password   = '4835414898a'; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('962289@bk.ru', '962289'); // Адрес самой почты и имя отправителя
+    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+	$mail->Username = 'no-reply@gridstudio.ru'; // Ваш логин в Яндексе. Именно логин, без @yandex.ru
+	$mail->Password = 'iCd9D6mRR59j4VuJ'; // Ваш пароль
+	$mail->SMTPSecure = 'ssl';
+	$mail->Port = 465;
+	$mail->setFrom('no-reply@gridstudio.ru'); // Ваш Email
 
     // Получатель письма
     $mail->addAddress('dpodbereznyh@gmail.com');
+    $mail->addAddress('test@apimedia.ru');
+    
+    
+$message = "ЖК Новая Слобода"."<br />";
+if (isset($_POST['title'])) {
+    $message .= "Форма: ".$_POST['title']."<br />";
+}
+if (isset($_POST['subtitle'])) {
+    $message .= "Адрес: ".$_POST['subtitle']."<br />";
+}
+if (isset($_POST['object'])) {
+    $message .= "Объект: ".$_POST['object']."<br />";
+}
+if (isset($_POST['name'])) {
+    $message .= "Имя: ".$_POST['name']."<br />";
+}
+if (isset($_POST['phone'])) {
+    $message .= "Телефон: ".$_POST['phone']."<br />";
+}
+if (isset($_POST['date'])) {
+    $message .= "Дата: ".$_POST['date']."<br />";
+}
+if (isset($_POST['comment'])) {
+    $message .= "Комментарий: ".$_POST['comment']."<br />";
+}
 
-    // Прикрипление файлов к письму
-//if (!empty($file['name'][0])) {
-//    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-//        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-//        $filename = $file['name'][$ct];
-//        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-//            $mail->addAttachment($uploadfile, $filename);
-//            $rfile[] = "Файл $filename прикреплён";
-//        } else {
-//            $rfile[] = "Не удалось прикрепить файл $filename";
-//        }
-//    }
-//}
-// Отправка сообщения
+// Письмо
 $mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;    
+$mail->Subject = "ЖК Новая Слобода"; // Заголовок письма
+$mail->Body = $message; // Текст письма
+$mail->CharSet = "utf-8";
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 

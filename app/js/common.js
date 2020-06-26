@@ -369,7 +369,11 @@ function showMsg(message, color) {
     msg.innerText = message;
     msg.style.background = color;
     gsapMsg.restart();
-}
+
+    setTimeout(function(){
+        msg.style.display = 'none';
+    }, 2000);
+};
 
 $(document).on( "click", ".msg", function() {
     msg.style.display = 'none';
