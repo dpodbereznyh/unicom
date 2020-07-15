@@ -188,9 +188,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
 
-    }
   }
   &__desc {
     font-family: "Roboto", sans-serif;
@@ -390,6 +388,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $akcentDark;
+    flex-direction: column;
     &:last-child {
       border-bottom: none;
     }
@@ -401,11 +400,13 @@
       display: flex;
       align-items: center;
       margin: 0 auto;
+      height: 59px;
     }
   }
   &_list {
     display: flex;
-    width: 80%;
+    width: 100%;
+    border-top: 1px solid $akcentDark;
   }
   &_item {
     padding: 13px 27px 29px;
@@ -416,6 +417,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    font-size: 16px;
+    &:first-child {
+      border-left: 0;
+    }
   }
   &_item_head {
     display: flex;
@@ -423,12 +428,14 @@
     @include secondaryTitle;
     color: $akcentDark;
     width: 100%;
+    font-size: 1em;
   }
   &_item_body {
     @include blockText;
     color: $akcentDark;
     margin-bottom: 4px;
     text-align: center;
+    font-size: 0.9em;
   }
   &_item_link {
     display: block;
@@ -436,6 +443,7 @@
     color: $akcentDark;
     font-weight: bold;
     text-align: center;
+    font-size: 0.9em;
   }
 }
 @include desktop {
@@ -450,6 +458,15 @@
     width: 100%;
   }
   .flat__result_item {
+    
+    font-size: 20px;
+    padding: 1vw 1.5vw;
+    height: 190px;
+    &.a-lot {
+      font-size: 1.222vw;
+      padding: 1vw 1.5vw;
+      height: 20.652vw;
+    }
     &:first-child {
       border-left: none;
     }
@@ -492,6 +509,15 @@
   }
   .flat__result_item {
     width: 50%;
+    padding: 13px 27px 29px;
+    height: 190px;
+    font-size: 20px;
+    &.a-lot {
+      width: 50%;
+      padding: 13px 27px 29px;
+      height: 190px;
+      font-size: 20px;
+    }
   }
   .flat__result_list {
     border: none;
@@ -509,6 +535,8 @@
   .select-flat {
     padding: 32px 0 32px;
   }
+
+  
 }
 @include phones {
   .select-porch__title {
