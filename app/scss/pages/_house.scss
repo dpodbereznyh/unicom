@@ -210,7 +210,22 @@
   .facing__item {
     margin-bottom: 25px;
   }
+  .facing__item {
+    padding-bottom: 0;
+  }
+  .standard-design {
+    padding-top: 64px!important;
+  }
 }
+@include tablet {
+
+}
+@include phones {
+
+
+}
+
+
 // Standard Design
 .standard-design {
   padding-top: 0;
