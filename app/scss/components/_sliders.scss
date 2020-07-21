@@ -100,12 +100,12 @@
     outline: none;
   }
 }
-.news-slider-button-prev {
-  transform: translate(50%, -50%);
-}
-.news-slider-button-next {
-  transform: translate(-50%, -50%);
-}
+//.news-slider-button-prev {
+//  transform: translate(50%, -50%);
+//}
+//.news-slider-button-next {
+//  transform: translate(-50%, -50%);
+//}
 .swiper-button-next {
   right: 0;
   cursor: pointer;
@@ -114,8 +114,9 @@
   left: 0;
   cursor: pointer;
 }
+
 @include desktop {
-  .news__slider_container {
+  .news__slider_container, .news__slider-wrap {
     width: 85%;
   }
   .news__slide_desc {
@@ -123,7 +124,7 @@
   }
 }
 @include laptop {
-  .news__slider_container {
+  .news__slider_container, .news__slider-wrap {
     width: 80%;
   }
 }
@@ -399,10 +400,18 @@
   }
 }
 .progress-build__slider-button-next {
-  transform: translate(-50%, -50%);
+  transform: translate(110%, -50%);
 }
 .progress-build__slider-button-prev {
-  transform: translate(50%, -50%);
+  transform: translate(-110%, -50%);
+}
+@media screen and (max-width: 1400px ) {
+  .progress-build__slider-button-next {
+    transform: translate(0%, -50%);
+  }
+  .progress-build__slider-button-prev {
+    transform: translate(0%, -50%);
+  }
 }
 @include desktop {
   .progress-build__slider_container {
@@ -455,10 +464,18 @@
   }
 }
 .standard-design__slider-button-prev {
-  transform: translate(50%, -50%);
+  transform: translate(-110%, -50%);
 }
 .standard-design__slider-button-next {
-  transform: translate(-50%, -50%);
+  transform: translate(110%, -50%);
+}
+@media screen and (max-width: 1400px ) {
+  .standard-design__slider-button-next {
+    transform: translate(0%, -50%);
+  }
+  .standard-design__slider-button-prev {
+    transform: translate(0%, -50%);
+  }
 }
 @include desktop {
   .standard-design__slider_container {
@@ -526,6 +543,20 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
+  }
+}
+.bank__slider-button-prev {
+  transform: translate(-110%, -50%);
+}
+.bank__slider-button-next {
+  transform: translate(110%, -50%);
+}
+@media screen and (max-width: 1400px ) {
+  .bank__slider-button-next {
+    transform: translate(0%, -50%);
+  }
+  .bank__slider-button-prev {
+    transform: translate(0%, -50%);
   }
 }
 @include desktop {

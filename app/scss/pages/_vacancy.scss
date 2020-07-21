@@ -76,6 +76,8 @@
         border-radius: 50%;
         background: $akcent1;
         margin-right: 32px;
+        font-size: 2px;
+        color: transparent;
       }
       > p {
         @include blockText;
