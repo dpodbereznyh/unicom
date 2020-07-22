@@ -440,9 +440,9 @@
 //Standard Design
 
 .standard-design__slider {
-  width: 100%;
+  width: 70%;
   position: relative;
-  margin-bottom: 64px;
+  margin: 0 auto 64px;
   &_container {
     //max-height: 620px;
     max-width: 1284px;
@@ -469,14 +469,14 @@
 .standard-design__slider-button-next {
   transform: translate(110%, -50%);
 }
-@media screen and (max-width: 1400px ) {
-  .standard-design__slider-button-next {
-    transform: translate(0%, -50%);
-  }
-  .standard-design__slider-button-prev {
-    transform: translate(0%, -50%);
-  }
-}
+//@media screen and (max-width: 1400px ) {
+//  .standard-design__slider-button-next {
+//    transform: translate(0%, -50%);
+//  }
+//  .standard-design__slider-button-prev {
+//    transform: translate(0%, -50%);
+//  }
+//}
 @include desktop {
   .standard-design__slider_container {
     max-width: 960px;
@@ -491,10 +491,16 @@
   .standard-design__slider_container {
     max-width: 540px;
   }
+  .standard-design__slider {
+    width: 80%;
+  }
 }
 @include phones {
   .standard-design_slider_container {
     max-width: 290px;
+  }
+  .standard-design__slider {
+    width: 90%;
   }
 }
 

@@ -1,0 +1,311 @@
+.nbFlats:after {
+  display: block;
+  clear: both;
+  content: ''
+}
+.nbFlats .sh_holder {
+  width: 100%
+}
+
+.nbFlats .nb-utp-list.obj_pic {
+  margin-top: 15px
+}
+.nbFlats .first_holder,.nbFlats .inhouse_ph .flt__holder {
+  border: none
+}
+.nbFlats #sh_holderdy {
+  width: 100%
+}
+
+.nbFlats .tbl_header TD,.nbFlats .tbl_header TH,.sh_table_list TR.tbl_item TD {
+  padding-left: 0!important;
+  padding-right: 0!important
+}
+
+//.nbFlats table {
+//  table-layout: fixed
+//}
+
+
+
+
+
+#mobile .list_double>li:after,#mobile .list_tripple>li:after,#mobile .main-pblc li:after,#mobile .nb_mnu:after,#mobile .new_list .item:after,#mobile .obj_pic .obj_i:after,.holder:after,.main-menu:after,.mobile-flt:after,.news_i.cycle-slide:after,.obj_view_fotorama,.row:after,.sh_header:after,.wraper:after {
+  content: '';
+  display: block;
+  clear: both
+}
+.obj-headers .obj-price a.report,.sh_header a.report,.utp-flat a.report {
+  background: url(/images/v3/icon-att.png) left no-repeat;
+  padding-left: 24px;
+  color: #525a5d;
+  font-size: 12px
+}
+.sh_header {
+  position: relative
+}
+.sh_header+.wraper {
+  margin-top: 0
+}
+
+.sh_header>a {
+  line-height: 30px
+}
+
+.sh_header a.report {
+  float: right
+}
+
+
+
+
+
+
+
+
+
+
+ul.nb_mnu {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+ul.nb_mnu li {
+  margin: 0;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+.nb_mnu li a.sel, .nb_mnu li A:hover {
+  background: #506266;
+  color: #f0f3f5;
+  font-weight: 400;
+}
+ul.nb_mnu li a {
+  border-bottom: none;
+  padding: 0 13px;
+  height: 30px;
+  line-height: 30px;
+  background: #f0f3f5;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+.sh_table {
+  margin-top: 0;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  font-size: 12px
+}
+.sh_table tr td {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 2px;
+  white-space: nowrap
+}
+.sh_table tr td.floor_tit {
+  text-align: center;
+  font-weight: 700;
+  padding: 8px;
+  border-right: 1px solid #000;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-top-color: transparent;
+  border-left-color: transparent
+}
+
+.sh_table tr.flr1 td {
+  border-bottom: 1px solid #000
+}
+
+.sh_table tr.flr0 td.floor_tit {
+  border-right: 1px solid #f5f5f5
+}
+
+.sh_table tr.flr0 td {
+  border-color: #f5f5f5
+}
+
+.sh_table tr td.entrance {
+  text-align: center;
+  font-weight: 700;
+  border-right: 1px solid #000;
+  border-top-color: transparent
+}
+
+.sh_table tr td.entrance.last_enter {
+  border-right: 1px solid #f1f4f5
+}
+
+.sh_table tr td.sqr {
+  text-align: center;
+  font-weight: 400;
+  background: #f1f4f5;
+  white-space: nowrap;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sh_table tr td.obj_cell {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-weight: 700;
+  text-align: center;
+
+}
+
+.sh_table tr td.obj_cell.rm_special {
+  border: 2px solid #dd0016
+}
+
+.sh_table tr td.obj_cell.rm_profit {
+  color: #dd0016!important
+}
+
+.sh_table tr td.obj_cell.rm0 {
+  background-color: #fff3ba
+}
+
+.sh_table tr td.obj_cell.rm1 {
+  background-color: #e6f6d7
+}
+
+.sh_table tr td.obj_cell.rm2 {
+  background-color: #cae4f9
+}
+
+.sh_table tr td.obj_cell.rm3 {
+  background-color: #e6cdef
+}
+
+.sh_table tr td.obj_cell.non {
+  background-color: #f1f4f5
+}
+
+.sh_table tr td.obj_cell.dis {
+  background-color: #cbd5d9
+}
+
+.sh_table tr td.obj_cell.minprice {
+  background-image: url(icons/i-minprice.png);
+  background-position: right;
+  background-repeat: no-repeat
+}
+
+.sh_table_list tr.minprice td.fld_kmn {
+  background-image: url(icons/i-minprice.png);
+  background-position: 10px 5px;
+  background-repeat: no-repeat
+}
+
+.sh_table_list tr.rm_special {
+  border: 2px solid #dd0016
+}
+
+.sh_table tr td.obj_cell.has:hover {
+  background: #6abf2f!important;
+  color: #fff
+}
+
+.sh_table tr td.obj_cell.has.sel {
+  background: #6abf2f!important;
+  color: #fff
+}
+
+.sh_table tr td.obj_cell.last {
+  border-right: 1px solid #000
+}
+
+.sh_table tr td.obj_cell.last.last_enter {
+  border-right: 1px solid #ddd
+}
+
+.sh_table tr td.obj_cell.disabled {
+  color: #b3b3b3!important;
+  background-color: #cbd5d9!important
+}
+
+.sh_table tr td.sqr.last {
+  border-right: 1px solid #000
+}
+
+.sh_table tr td.sqr.last.last_enter {
+  border-right: 1px solid #ddd
+}
+
+//.sh_table_list .tbl_item {
+//  cursor: pointer
+//}
+
+.sh_table_list .tbl_item.sel {
+  background-color: #4f5d62;
+  color: #fff
+}
+
+.sh_table_list .tbl_item.sel td,.tbl_item.sel:hover td {
+  background: #6abf2f;
+  color: #fff!important
+}
+
+.sh_table_list .tbl_item.disabled td {
+  color: #b3b3b3!important;
+  background-color: #cbd5d9!important
+}
+
+.sh_table_list .tbl_item.disabled {
+  display: none
+}
+
+.sh_table_list .tbl_item td {
+  font-size: 12px
+}
+
+.sh_table_list TR.tbl_header TD {
+  padding: 2px;
+  font-size: 12px
+}
+
+.sh_table_list TR.tbl_item TD {
+  padding: 2px
+}
+
+TR.tbl_item TD.fld_area {
+  white-space: nowrap
+}
+
+.sh_table_list TR TD.fld_ext {
+  width: 100px
+}
+.sh_table_list tr.rm_special {
+  border: 0
+}
+.nbFlats .tbl_header TD,.nbFlats .tbl_header TH,.sh_table_list TR.tbl_item TD {
+  padding-left: 0!important;
+  padding-right: 0!important
+}
+.sh_table tr td.floor_tit {
+  text-align: center;
+  font-weight: 700;
+  padding: 8px;
+  border-right: 1px solid #000;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.sh_table tr td {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 7px;
+  white-space: nowrap;
+}
+.nbFlats .sh_holder {
+  width: 100%
+}
+.sup {
+  font-size: 9px;
+}
