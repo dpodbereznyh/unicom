@@ -95,8 +95,10 @@ $(document).ready(function () {
         wrapperClass: 'general-view__thumbs_wrapper',
         slidesPerView: 3,
         spaceBetween: 5,
+        lazy: true,
         lazy: {
             loadPrevNext: true,
+            watchSlidesVisibility: true,
         },
     });
 //General View Swiper Slider
@@ -108,8 +110,10 @@ $(document).ready(function () {
         thumbs: {
             swiper: GeneralViewThumbs,
         },
+        lazy: true,
         lazy: {
             loadPrevNext: true,
+            watchSlidesVisibility: true,
         },
         pagination: {
             el: '.swiper-pagination',
@@ -133,8 +137,10 @@ $(document).ready(function () {
         wrapperClass: 'unfinished-house__slider_wrapper',
         slidesPerView: 1,
         autoHeight: true,
+        lazy: true,
         lazy: {
             loadPrevNext: true,
+            watchSlidesVisibility: true,
         },
         pagination: {
             el: '.swiper-pagination',
@@ -159,8 +165,10 @@ $(document).ready(function () {
         wrapperClass: 'progress-build__slider_wrapper',
         slidesPerView: 1,
         spaceBetween: 10,
+        lazy: true,
         lazy: {
             loadPrevNext: true,
+            watchSlidesVisibility: true,
         },
         navigation: {
             nextEl: '.progress-build__slider-button-next',
@@ -190,6 +198,12 @@ $(document).ready(function () {
         slideClass: 'standard-design__slider_slide',
         wrapperClass: 'standard-design__slider_wrapper',
         slidesPerView: 1,
+        spaceBetween: 2,
+        lazy: true,
+        lazy: {
+            loadPrevNext: true,
+            watchSlidesVisibility: true,
+        },
         autoHeight: true,
         navigation: {
             nextEl: '.standard-design__slider-button-next',
@@ -203,8 +217,10 @@ $(document).ready(function () {
         wrapperClass: 'bank__slider_wrapper',
         slidesPerView: 1,
         spaceBetween: 10,
+        lazy: true,
         lazy: {
             loadPrevNext: true,
+            watchSlidesVisibility: true,
         },
         navigation: {
             nextEl: '.bank__slider-button-next',

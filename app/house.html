@@ -670,7 +670,7 @@
             <h2 class="section__title">
                 Квартиры с отделкой. Что входит в отделку
             </h2>
-            <div class="row">
+            <div class="row justify-content-between">
                 <div class="col-6 col-sm-4 col-lg-2">
                     <div class="facing__item">
                         <div class="facing__img">
@@ -744,13 +744,18 @@
                 <div class="swiper-container standard-design__slider_container">
                     <div class="swiper-wrapper standard-design__slider_wrapper">
                         <a href="img/standart-design/image1.jpg" class="swiper-slide standard-design__slider_slide" data-fancybox="standard-design">
-                            <img src="img/standart-design/image1.jpg" alt="Стандартный дизайн">
+                            <img data-src="img/standart-design/image1.jpg" class="swiper-lazy" alt="Стандартный дизайн">
+                            <div class="swiper-lazy-preloader"></div>
                         </a>
                         <a href="img/standart-design/image1.jpg" class="swiper-slide standard-design__slider_slide" data-fancybox="standard-design">
-                            <img src="img/house/image6.jpg" alt="Стандартный дизайн">
+                            <img data-src="img/house/image6.jpg" alt="Стандартный дизайн">
+                            <div class="swiper-lazy-preloader"></div>
                         </a>
                         <a href="img/standart-design/image1.jpg" class="swiper-slide standard-design__slider_slide" data-fancybox="standard-design">
-                            <img src="img/house/image65.jpg" alt="Стандартный дизайн">
+                            <img data-src="img/house/image65.jpg" alt="Стандартный дизайн">
+                        </a>
+                        <a href="img/standart-design/image1.jpg" class="swiper-slide standard-design__slider_slide" data-fancybox="standard-design">
+                            <img data-src="img/house/image65.jpg" alt="Стандартный дизайн">
                         </a>
                     </div>
                 </div>
@@ -1225,6 +1230,18 @@
 
 <script src="js/scripts.min.js"></script>
 
+<!-- Begin LeadBack code {literal} -->
+<script>
+    var _emv = _emv || [];
+    _emv['campaign'] = 'a0f13bc8e2cd7a5853ccb924';
+
+    (function() {
+        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+        em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+    } )();
+</script>
+<!-- End LeadBack code {/literal} -->
 
 
 </body>
