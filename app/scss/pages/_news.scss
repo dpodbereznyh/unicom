@@ -37,23 +37,58 @@
   }
   &__item_wrap {
     width: 33%;
-  }
-  p {
-    span {
-      @include blockText;
-      color: $akcentDark;
-      margin-bottom: 32px;
-      display: block;
-    }
-    margin-bottom: 32px;
-
+  //  p {
+  //    margin-bottom: 32px;
+  //    @include blockText;
+  //    color: $akcentDark;
+  //    span {
+  //      @include blockText;
+  //      color: $akcentDark;
+  //      margin-bottom: 32px;
+  //      display: block;
+  //    }
+  //  }
+  //  ul {
+  //    list-style: disc;
+  //    padding-left: 20px;
+  //    p {
+  //      @include secondaryTitle;
+  //      display: block;
+  //      margin-bottom: 32px;
+  //    }
+  //    span {
+  //      @include secondaryTitle;
+  //      display: block;
+  //      margin-bottom: 32px;
+  //    }
+  //    li {
+  //      margin-bottom: 16px;
+  //      &:last-child {
+  //        margin-bottom: 0;
+  //      }
+  //      p {
+  //        @include blockText;
+  //        color: $akcentDark;
+  //        margin-bottom: 0;
+  //        span {
+  //          @include blockText;
+  //          color: $akcentDark;
+  //          margin-bottom: 0;
+  //        }
+  //      }
+  //      span {
+  //        @include blockText;
+  //        color: $akcentDark;
+  //        margin-bottom: 0;
+  //      }
+  //    }
+  //  }
   }
   &__item_title {
     @include secondaryTitle;
     color: $akcentDark;
     margin-bottom: 16px;
   }
-
 }
 @include laptop {
   .news-page__item_body {

@@ -1,0 +1,122 @@
+.content {
+  h1 {
+    @include mainTitle;
+    margin-bottom: 32px;
+    color: $akcentDark
+  }
+  h2 {
+    @include firstTitle;
+    margin-bottom: 32px;
+    color: $akcentDark
+  }
+  h3 {
+    @include secondaryTitle;
+    margin-bottom: 32px;
+    color: $akcentDark
+  }
+  h4 {
+
+  }
+  h6 {
+    @include secondaryTitle;
+    color: $akcentDark;
+    margin-bottom: 16px;
+  }
+  p {
+    @include blockText;
+    color: $akcentDark
+  }
+  a {
+    @include blockText;
+    text-decoration: none;
+    display: inline-block;
+  }
+  img {
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+  table {
+    @include blockText;
+    color: $akcentDark;
+    width: 100%;
+    caption {
+      margin-bottom: 32px;
+      caption-side: top;
+    }
+    tr {
+      border: 1px solid $akcentDark;
+      &:nth-child(even) {
+        background-color: #e7e7e7;
+      }
+    }
+    th {
+      padding: 4px 10px;
+      border: 1px solid $akcentDark;
+      width: 50%;
+      text-align: center;
+    }
+    tfoot {
+      tr {
+        th {
+          text-align: start;
+          padding: 4px 0;
+        }
+      }
+    }
+    td {
+      padding: 4px 10px;
+      border: 1px solid $akcentDark;
+      width: 50%;
+    }
+  }
+  p {
+    margin-bottom: 32px;
+    @include blockText;
+    color: $akcentDark;
+    span {
+      @include blockText;
+      color: $akcentDark;
+      margin-bottom: 32px;
+      display: block;
+    }
+  }
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    p {
+      @include secondaryTitle;
+      display: block;
+      margin-bottom: 32px;
+    }
+    span {
+      @include secondaryTitle;
+      display: block;
+      margin-bottom: 32px;
+    }
+    li {
+      margin-bottom: 16px;
+      @include blockText;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      p {
+        @include blockText;
+        color: $akcentDark;
+        margin-bottom: 0;
+        span {
+          @include blockText;
+          color: $akcentDark;
+          margin-bottom: 0;
+        }
+      }
+      span {
+        @include blockText;
+        color: $akcentDark;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
