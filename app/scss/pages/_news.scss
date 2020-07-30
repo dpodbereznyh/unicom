@@ -38,16 +38,22 @@
   &__item_wrap {
     width: 33%;
   }
+  p {
+    span {
+      @include blockText;
+      color: $akcentDark;
+      margin-bottom: 32px;
+      display: block;
+    }
+    margin-bottom: 32px;
+
+  }
   &__item_title {
     @include secondaryTitle;
     color: $akcentDark;
     margin-bottom: 16px;
   }
-  &__item_text {
-    @include blockText;
-    color: $akcentDark;
-    margin-bottom: 82px;
-  }
+
 }
 @include laptop {
   .news-page__item_body {
