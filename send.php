@@ -24,8 +24,9 @@ try {
     // Получатель письма
     $mail->addAddress('dpodbereznyh@gmail.com');
     $mail->addAddress('test@apimedia.ru');
-    
-    
+
+
+
 $message = "ЖК Новая Слобода"."<br />";
 if (isset($_POST['title'])) {
     $message .= "Форма: ".$_POST['title']."<br />";

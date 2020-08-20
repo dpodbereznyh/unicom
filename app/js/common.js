@@ -343,6 +343,21 @@ $(".popup-form").submit(function(){
   });
   return false;
 });
+$("#popup-director").submit(function(){
+  $.ajax({
+    type: "POST",
+    url: "send.php",
+    data: $(this).serialize()
+  }).done(function() {
+    // $(this).find("input").val("");
+      parent.jQuery.fancybox.getInstance().close();
+    $.fancybox.open({
+      src: '.fancyalert',
+    });
+    $(".popup-director").trigger("reset");
+  });
+  return false;
+});
 $("#formt-questions").submit(function(){
   $.ajax({
     type: "POST",

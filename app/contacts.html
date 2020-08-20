@@ -255,6 +255,46 @@
                 <!--</div>-->
             </div>
         </div>
+        <div class="meneger__item">
+            <p>
+                Если ваш вопрос не решается, напишите генеральному директору Дедяеву Евгению Владимировичу.
+            </p>
+            <a href="#popup-feedback" class="btn footer__btn" >
+                Написать директору
+            </a>
+        </div>
+
+        <div class="d-none">
+            <div  class="popup-feedback" id="popup-feedback">
+                <!--<div class="msg" onclick="gsapMsg.reverse()">Сообщение</div>-->
+                <form method="post" class="form popup-form" >
+                    <p class="form__subtitle form__subtitl-feedback">
+                        Свяжитесь с нашими менеджерами
+                    </p>
+                    <input type="hidden" value="" name="director" required="" >
+                    <input id="jsTitle" type="hidden" value="" name="title" required="" >
+                    <input id="jsInput" type="hidden" value="" name="subtitle" required="" >
+                    <div class="controls">
+                        <input type="text" name="name" value="" placeholder="Ваше имя" class="form__input aInput js-title">
+                        <span class="error_name"></span>
+                    </div>
+                    <div class="controls">
+                        <input type="tel" name="phone" value="" placeholder="Номер телефона*" required class="form__input aInput">
+                        <span class="error_phone"></span>
+                    </div>
+                    <div class="controls">
+                        <textarea type="text" name="comment" placeholder="Ваше сообщение" class="form__textarea aInput"></textarea>
+                    </div>
+                    <button class="form__btn btn">
+                        Отправить
+                    </button>
+                </form>
+
+            </div>
+            <div id="fancyalert" class="fancyalert">
+                <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
+            </div>
+        </div>
     </section>
 </main>
 <footer class="footer" id="footer">
@@ -470,6 +510,7 @@
         </div>
     </div>
 </footer>
+
 <script src="js/scripts.min.js"></script>
 
 
