@@ -7,6 +7,33 @@ html {
 }
 body {
   min-width: 320px;
+
+}
+.sh_holder {
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    height: 30px;
+    background-color: #f9f9fd;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: #f2f2f2;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #d2d2d2;
+  }
+  &::-webkit-scrollbar-button {
+    width: 30px;
+    height: 30px;
+    &:decrement {
+      background: #d2d2d2 url("../img/scrollbar/prev-icon.svg") no-repeat center center/50% 50%;
+      border: 1px solid #d2d2d2;
+    }
+    &:increment {
+      background: #d2d2d2 url("../img/scrollbar/next-icon.svg") no-repeat center center/50% 50%;
+      border: 1px solid #d2d2d2;
+    }
+  }
+
 }
 .container-fluid {
   max-width: 1284px;
